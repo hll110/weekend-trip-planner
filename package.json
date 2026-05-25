@@ -1,0 +1,25 @@
+{
+  "name": "weekend-trip-planner",
+  "version": "1.0.0",
+  "description": "周边游助手微信小程序 - 周末出行计划推荐",
+  "main": "miniprogram/app.js",
+  "scripts": {
+    "dev": "echo \"请使用微信开发者工具打开项目\"",
+    "build": "echo \"请使用微信开发者工具上传代码\"",
+    "server": "cd server && python3 app.py",
+    "start": "npm run server"
+  },
+  "keywords": [
+    "wechat",
+    "miniprogram",
+    "travel",
+    "weekend",
+    "trip",
+    "周边游",
+    "周末出行"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

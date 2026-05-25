@@ -1,0 +1,365 @@
+/* pages/index/index.wxss */
+
+/* 位置卡片 */
+.location-card {
+  margin-bottom: 24rpx;
+}
+
+.location-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.location-icon {
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+
+.location-info {
+  flex: 1;
+}
+
+.location-title {
+  font-size: 24rpx;
+  color: #64748b;
+  margin-bottom: 4rpx;
+}
+
+.location-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4rpx;
+}
+
+.location-address {
+  font-size: 26rpx;
+  color: #64748b;
+}
+
+.location-change {
+  display: flex;
+  align-items: center;
+  color: #4f46e5;
+  font-size: 26rpx;
+  font-weight: 500;
+  gap: 4rpx;
+}
+
+/* 天气信息 */
+.weather-info {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  border-radius: 16rpx;
+  padding: 20rpx 24rpx;
+  color: white;
+}
+
+.weather-temp {
+  font-size: 48rpx;
+  font-weight: 600;
+  margin-right: 20rpx;
+}
+
+.weather-desc {
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+
+.weather-humidity {
+  font-size: 24rpx;
+  opacity: 0.9;
+}
+
+/* 筛选条件 */
+.filter-section {
+  margin-bottom: 24rpx;
+}
+
+.filter-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 16rpx;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-bottom: 16rpx;
+}
+
+.filter-tag {
+  padding: 12rpx 24rpx;
+  background: white;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  color: #64748b;
+  border: 2rpx solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.filter-tag.active {
+  background: #4f46e5;
+  color: white;
+  border-color: #4f46e5;
+}
+
+.duration-tags {
+  display: flex;
+  gap: 12rpx;
+}
+
+.duration-tag {
+  padding: 12rpx 24rpx;
+  background: white;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  color: #64748b;
+  border: 2rpx solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.duration-tag.active {
+  background: #7c3aed;
+  color: white;
+  border-color: #7c3aed;
+}
+
+/* 路线部分 */
+.routes-section {
+  margin-bottom: 24rpx;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.section-count {
+  font-size: 26rpx;
+  color: #64748b;
+}
+
+/* 路线卡片 */
+.route-card {
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+}
+
+.route-image {
+  position: relative;
+  height: 300rpx;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+.route-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.route-type-badge {
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  color: white;
+  font-weight: 500;
+}
+
+.route-type-badge.food {
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+}
+
+.route-type-badge.hiking {
+  background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
+}
+
+.route-type-badge.scenic {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+.route-duration-badge {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  padding: 8rpx 16rpx;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  color: white;
+  font-weight: 500;
+}
+
+.route-content {
+  padding: 24rpx;
+}
+
+.route-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16rpx;
+}
+
+.route-name {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #1e293b;
+  flex: 1;
+  margin-right: 16rpx;
+}
+
+.route-rating {
+  display: flex;
+  align-items: center;
+  gap: 4rpx;
+}
+
+.rating-star {
+  font-size: 28rpx;
+}
+
+.rating-text {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #f59e0b;
+}
+
+.review-count {
+  font-size: 24rpx;
+  color: #64748b;
+}
+
+.route-desc {
+  font-size: 28rpx;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 16rpx;
+}
+
+.route-meta {
+  display: flex;
+  gap: 24rpx;
+  margin-bottom: 16rpx;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  font-size: 26rpx;
+  color: #64748b;
+}
+
+.route-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-bottom: 16rpx;
+}
+
+.highlight-tag {
+  padding: 8rpx 16rpx;
+  background: #eef2ff;
+  color: #4f46e5;
+  border-radius: 16rpx;
+  font-size: 24rpx;
+}
+
+.route-food {
+  background: #f8fafc;
+  border-radius: 12rpx;
+  padding: 16rpx;
+}
+
+.food-title {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8rpx;
+}
+
+.food-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.food-list text {
+  padding: 8rpx 16rpx;
+  background: #fffbeb;
+  color: #f59e0b;
+  border-radius: 16rpx;
+  font-size: 24rpx;
+}
+
+/* 快速操作 */
+.quick-actions {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  border-radius: 20rpx;
+  padding: 32rpx 24rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+}
+
+.action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.action-icon {
+  font-size: 48rpx;
+}
+
+.action-text {
+  font-size: 26rpx;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* 空状态 */
+.empty-state {
+  padding: 80rpx 40rpx;
+}
+
+/* 响应式设计 */
+@media (max-width: 750rpx) {
+  .route-image {
+    height: 240rpx;
+  }
+  
+  .route-name {
+    font-size: 30rpx;
+  }
+  
+  .quick-actions {
+    padding: 24rpx 16rpx;
+  }
+  
+  .action-icon {
+    font-size: 40rpx;
+  }
+  
+  .action-text {
+    font-size: 24rpx;
+  }
+}

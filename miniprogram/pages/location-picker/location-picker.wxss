@@ -1,0 +1,293 @@
+/* pages/location-picker/location-picker.wxss */
+
+.location-header {
+  margin-bottom: 40rpx;
+}
+
+.location-title {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8rpx;
+}
+
+.location-subtitle {
+  font-size: 28rpx;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* 当前位置 */
+.current-location {
+  margin-bottom: 32rpx;
+}
+
+.current-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.current-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #374151;
+}
+
+.current-refresh {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  color: #4f46e5;
+  font-size: 26rpx;
+}
+
+.current-info {
+  display: flex;
+  align-items: center;
+}
+
+.current-icon {
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+
+.current-details {
+  flex: 1;
+}
+
+.current-name {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #1e293b;
+  margin-bottom: 4rpx;
+}
+
+.current-address {
+  font-size: 26rpx;
+  color: #64748b;
+}
+
+.current-use {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  color: #4f46e5;
+  font-size: 26rpx;
+  font-weight: 500;
+}
+
+/* 搜索部分 */
+.search-section {
+  margin-bottom: 32rpx;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 16rpx;
+  padding: 20rpx 24rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.search-input {
+  flex: 1;
+  margin-left: 16rpx;
+  font-size: 28rpx;
+  color: #1e293b;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.search-clear {
+  padding: 8rpx;
+}
+
+/* 搜索结果 */
+.search-results {
+  background: white;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  border-bottom: 1rpx solid #f1f5f9;
+  transition: background 0.3s ease;
+}
+
+.search-result:last-child {
+  border-bottom: none;
+}
+
+.search-result:active {
+  background: #f8fafc;
+}
+
+.result-icon {
+  font-size: 32rpx;
+  margin-right: 20rpx;
+}
+
+.result-info {
+  flex: 1;
+}
+
+.result-name {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #1e293b;
+  margin-bottom: 4rpx;
+}
+
+.result-address {
+  font-size: 26rpx;
+  color: #64748b;
+}
+
+.result-distance {
+  font-size: 26rpx;
+  color: #94a3b8;
+}
+
+/* 搜索历史 */
+.search-history {
+  background: white;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx;
+  border-bottom: 1rpx solid #f1f5f9;
+}
+
+.history-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #374151;
+}
+
+.history-clear {
+  font-size: 26rpx;
+  color: #4f46e5;
+}
+
+.history-list {
+  max-height: 400rpx;
+  overflow-y: auto;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  border-bottom: 1rpx solid #f1f5f9;
+  transition: background 0.3s ease;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-item:active {
+  background: #f8fafc;
+}
+
+.history-info {
+  flex: 1;
+  margin-left: 16rpx;
+}
+
+.history-name {
+  font-size: 28rpx;
+  color: #1e293b;
+  margin-bottom: 4rpx;
+}
+
+.history-address {
+  font-size: 24rpx;
+  color: #64748b;
+}
+
+.history-delete {
+  padding: 8rpx;
+}
+
+/* 热门位置 */
+.hot-locations {
+  margin-bottom: 32rpx;
+}
+
+.hot-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20rpx;
+}
+
+.hot-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.hot-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 30rpx;
+  padding: 16rpx 24rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.hot-item:active {
+  transform: scale(0.98);
+  box-shadow: 0 1rpx 5rpx rgba(0, 0, 0, 0.1);
+}
+
+.hot-icon {
+  font-size: 32rpx;
+  margin-right: 12rpx;
+}
+
+.hot-name {
+  font-size: 26rpx;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* 操作按钮 */
+.location-actions {
+  margin-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.location-actions .btn {
+  width: 100%;
+  height: 96rpx;
+}
+
+/* 响应式设计 */
+@media (max-width: 750rpx) {
+  .hot-list {
+    flex-direction: column;
+  }
+  
+  .hot-item {
+    justify-content: center;
+  }
+}

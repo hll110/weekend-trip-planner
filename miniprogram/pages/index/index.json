@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "周边游助手",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

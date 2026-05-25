@@ -1,0 +1,92 @@
+<!--pages/location-picker/location-picker.wxml-->
+<view class="container">
+  <view class="location-header">
+    <view class="location-title">选择起始位置</view>
+    <view class="location-subtitle">选择您想要出发的位置，我们将为您推荐周边游路线</view>
+  </view>
+  
+  <!-- 当前位置 -->
+  <view class="current-location card">
+    <view class="current-header">
+      <view class="current-title">当前位置</view>
+      <view class="current-refresh" bindtap="refreshLocation">
+        <icon type="refresh" size="14" color="#4f46e5"/>
+        <text>刷新</text>
+      </view>
+    </view>
+    
+    <view class="current-info">
+      <view class="current-icon">📍</view>
+      <view class="current-details">
+        <view class="current-name">{{currentLocation.name}}</view>
+        <view class="current-address">{{currentLocation.address}}</view>
+      </view>
+      <view class="current-use" bindtap="useCurrentLocation">
+        <text>使用此位置</text>
+        <icon type="right" size="14" color="#4f46e5"/>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 搜索位置 -->
+  <view class="search-section">
+    <view class="search-bar">
+      <icon type="search" size="16" color="#94a3b8"/>
+      <input class="search-input" placeholder="搜索地点、地址或地标" bindinput="onSearch" value="{{searchKey}}"/>
+      <view class="search-clear" wx:if="{{searchKey}}" bindtap="clearSearch">
+        <icon type="clear" size="14" color="#94a3b8"/>
+      </view>
+    </view>
+    
+    <!-- 搜索结果 -->
+    <view class="search-results" wx:if="{{searchResults.length > 0}}">
+      <view class="search-result" wx:for="{{searchResults}}" wx:key="id" bindtap="selectLocation" data-location="{{item}}">
+        <view class="result-icon">📍</view>
+        <view class="result-info">
+          <view class="result-name">{{item.name}}</view>
+          <view class="result-address">{{item.address}}</view>
+        </view>
+        <view class="result-distance">{{item.distance}}</view>
+      </view>
+    </view>
+    
+    <!-- 搜索历史 -->
+    <view class="search-history" wx:if="{{searchHistory.length > 0 && !searchKey}}">
+      <view class="history-header">
+        <view class="history-title">搜索历史</view>
+        <view class="history-clear" bindtap="clearHistory">清空</view>
+      </view>
+      <view class="history-list">
+        <view class="history-item" wx:for="{{searchHistory}}" wx:key="id" bindtap="selectHistory" data-location="{{item}}">
+          <icon type="time" size="14" color="#94a3b8"/>
+          <view class="history-info">
+            <view class="history-name">{{item.name}}</view>
+            <view class="history-address">{{item.address}}</view>
+          </view>
+          <view class="history-delete" catchtap="deleteHistory" data-id="{{item.id}}">
+            <icon type="clear" size="12" color="#94a3b8"/>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 热门位置 -->
+  <view class="hot-locations">
+    <view class="hot-title">热门位置</view>
+    <view class="hot-list">
+      <view class="hot-item" wx:for="{{hotLocations}}" wx:key="id" bindtap="selectLocation" data-location="{{item}}">
+        <view class="hot-icon">{{item.icon}}</view>
+        <view class="hot-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 操作按钮 -->
+  <view class="location-actions">
+    <button class="btn btn-primary" bindtap="chooseFromMap">
+      <icon type="location" size="20" color="#fff"/>
+      <text>从地图选择</text>
+    </button>
+  </view>
+</view>

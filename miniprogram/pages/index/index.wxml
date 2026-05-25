@@ -1,0 +1,137 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <!-- 位置信息卡片 -->
+  <view class="location-card card">
+    <view class="location-header">
+      <view class="location-icon">📍</view>
+      <view class="location-info">
+        <view class="location-title">当前位置</view>
+        <view class="location-name">{{location.name}}</view>
+        <view class="location-address">{{location.address}}</view>
+      </view>
+      <view class="location-change" bindtap="changeLocation">
+        <text>更换</text>
+        <icon type="right" size="14" color="#4f46e5"/>
+      </view>
+    </view>
+    
+    <!-- 天气信息 -->
+    <view class="weather-info" wx:if="{{weather}}">
+      <view class="weather-temp">{{weather.temp}}°C</view>
+      <view class="weather-desc">{{weather.description}}</view>
+      <view class="weather-humidity">湿度: {{weather.humidity}}%</view>
+    </view>
+  </view>
+  
+  <!-- 筛选条件 -->
+  <view class="filter-section">
+    <view class="filter-title">筛选条件</view>
+    <view class="filter-tags">
+      <view class="filter-tag {{filters.type === 'all' ? 'active' : ''}}" bindtap="setTypeFilter" data-type="all">
+        全部
+      </view>
+      <view class="filter-tag {{filters.type === 'food' ? 'active' : ''}}" bindtap="setTypeFilter" data-type="food">
+        🍽️ 美食优先
+      </view>
+      <view class="filter-tag {{filters.type === 'hiking' ? 'active' : ''}}" bindtap="setTypeFilter" data-type="hiking">
+        🥾 徒步路线
+      </view>
+      <view class="filter-tag {{filters.type === 'scenic' ? 'active' : ''}}" bindtap="setTypeFilter" data-type="scenic">
+        🏞️ 景区优先
+      </view>
+    </view>
+    
+    <view class="duration-tags">
+      <view class="duration-tag {{filters.duration === 'all' ? 'active' : ''}}" bindtap="setDurationFilter" data-duration="all">
+        全部时长
+      </view>
+      <view class="duration-tag {{filters.duration === '1day' ? 'active' : ''}}" bindtap="setDurationFilter" data-duration="1day">
+        1日游
+      </view>
+      <view class="duration-tag {{filters.duration === '2day' ? 'active' : ''}}" bindtap="setDurationFilter" data-duration="2day">
+        2日游
+      </view>
+    </view>
+  </view>
+  
+  <!-- 推荐路线 -->
+  <view class="routes-section">
+    <view class="section-header">
+      <view class="section-title">推荐路线</view>
+      <view class="section-count">共{{filteredRoutes.length}}条路线</view>
+    </view>
+    
+    <view wx:if="{{filteredRoutes.length > 0}}">
+      <view class="route-card card" wx:for="{{filteredRoutes}}" wx:key="id" bindtap="goToRouteDetail" data-id="{{item.id}}">
+        <view class="route-image">
+          <image src="{{item.image}}" mode="aspectFill" class="route-img"/>
+          <view class="route-type-badge {{item.type}}">
+            {{item.type === 'food' ? '美食' : item.type === 'hiking' ? '徒步' : '景区'}}
+          </view>
+          <view class="route-duration-badge">
+            {{item.duration === '1day' ? '1日游' : '2日游'}}
+          </view>
+        </view>
+        
+        <view class="route-content">
+          <view class="route-header">
+            <view class="route-name">{{item.name}}</view>
+            <view class="route-rating">
+              <text class="rating-star">⭐</text>
+              <text class="rating-text">{{item.rating}}</text>
+              <text class="review-count">({{item.reviews}}条评价)</text>
+            </view>
+          </view>
+          
+          <view class="route-desc">{{item.description}}</view>
+          
+          <view class="route-meta">
+            <view class="meta-item">
+              <icon type="location" size="14" color="#64748b"/>
+              <text>{{item.distance}}</text>
+            </view>
+            <view class="meta-item">
+              <icon type="time" size="14" color="#64748b"/>
+              <text>{{item.duration === '1day' ? '1天' : '2天'}}</text>
+            </view>
+          </view>
+          
+          <view class="route-highlights">
+            <view class="highlight-tag" wx:for="{{item.highlights}}" wx:for-item="highlight" wx:key="*this">
+              {{highlight}}
+            </view>
+          </view>
+          
+          <view class="route-food">
+            <view class="food-title">🍽️ 特色美食:</view>
+            <view class="food-list">
+              <text wx:for="{{item.food}}" wx:for-item="foodItem" wx:key="*this">{{foodItem}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <view wx:else class="empty-state">
+      <view class="empty-icon">🗺️</view>
+      <view class="empty-text">暂无符合条件的路线</view>
+      <button class="btn btn-primary mt-4" bindtap="resetFilters">重置筛选条件</button>
+    </view>
+  </view>
+  
+  <!-- 快速操作 -->
+  <view class="quick-actions">
+    <view class="action-item" bindtap="randomRoute">
+      <view class="action-icon">🎲</view>
+      <view class="action-text">随机推荐</view>
+    </view>
+    <view class="action-item" bindtap="viewAllRoutes">
+      <view class="action-icon">📋</view>
+      <view class="action-text">全部路线</view>
+    </view>
+    <view class="action-item" bindtap="openFilter">
+      <view class="action-icon">⚙️</view>
+      <view class="action-text">高级筛选</view>
+    </view>
+  </view>
+</view>

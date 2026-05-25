@@ -1,0 +1,92 @@
+<!--pages/filter/filter.wxml-->
+<view class="container">
+  <view class="filter-header">
+    <view class="filter-title">高级筛选</view>
+    <view class="filter-subtitle">根据您的偏好推荐最合适的路线</view>
+  </view>
+  
+  <!-- 路线类型 -->
+  <view class="filter-section">
+    <view class="section-title">路线类型</view>
+    <view class="type-options">
+      <view class="type-option {{filters.type === 'all' ? 'active' : ''}}" bindtap="setType" data-type="all">
+        <view class="type-icon">🗺️</view>
+        <view class="type-name">全部类型</view>
+        <view class="type-desc">不限制路线类型</view>
+      </view>
+      <view class="type-option {{filters.type === 'food' ? 'active' : ''}}" bindtap="setType" data-type="food">
+        <view class="type-icon">🍽️</view>
+        <view class="type-name">美食优先</view>
+        <view class="type-desc">以美食探索为主</view>
+      </view>
+      <view class="type-option {{filters.type === 'hiking' ? 'active' : ''}}" bindtap="setType" data-type="hiking">
+        <view class="type-icon">🥾</view>
+        <view class="type-name">徒步路线</view>
+        <view class="type-desc">适合徒步和户外</view>
+      </view>
+      <view class="type-option {{filters.type === 'scenic' ? 'active' : ''}}" bindtap="setType" data-type="scenic">
+        <view class="type-icon">🏞️</view>
+        <view class="type-name">景区优先</view>
+        <view class="type-desc">以景点观光为主</view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 行程时长 -->
+  <view class="filter-section">
+    <view class="section-title">行程时长</view>
+    <view class="duration-options">
+      <view class="duration-option {{filters.duration === 'all' ? 'active' : ''}}" bindtap="setDuration" data-duration="all">
+        <view class="duration-icon">⏰</view>
+        <view class="duration-name">全部时长</view>
+      </view>
+      <view class="duration-option {{filters.duration === '1day' ? 'active' : ''}}" bindtap="setDuration" data-duration="1day">
+        <view class="duration-icon">📅</view>
+        <view class="duration-name">1日游</view>
+        <view class="duration-desc">适合周末一天</view>
+      </view>
+      <view class="duration-option {{filters.duration === '2day' ? 'active' : ''}}" bindtap="setDuration" data-duration="2day">
+        <view class="duration-icon">📆</view>
+        <view class="duration-name">2日游</view>
+        <view class="duration-desc">适合周末两天</view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 其他筛选条件 -->
+  <view class="filter-section">
+    <view class="section-title">其他条件</view>
+    <view class="other-options">
+      <view class="other-option">
+        <view class="option-label">优先显示评价高的路线</view>
+        <switch checked="{{filters.highRating}}" bindchange="toggleHighRating" color="#4f46e5"/>
+      </view>
+      <view class="other-option">
+        <view class="option-label">包含特色美食推荐</view>
+        <switch checked="{{filters.includeFood}}" bindchange="toggleIncludeFood" color="#4f46e5"/>
+      </view>
+      <view class="other-option">
+        <view class="option-label">包含详细行程安排</view>
+        <switch checked="{{filters.includeSchedule}}" bindchange="toggleIncludeSchedule" color="#4f46e5"/>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 筛选结果预览 -->
+  <view class="filter-preview">
+    <view class="preview-title">筛选结果预览</view>
+    <view class="preview-count">预计找到 {{filteredCount}} 条路线</view>
+    <view class="preview-routes" wx:if="{{previewRoutes.length > 0}}">
+      <view class="preview-route" wx:for="{{previewRoutes}}" wx:key="id">
+        <view class="preview-route-name">{{item.name}}</view>
+        <view class="preview-route-type">{{item.type === 'food' ? '美食' : item.type === 'hiking' ? '徒步' : '景区'}}</view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 操作按钮 -->
+  <view class="filter-actions">
+    <button class="btn btn-outline" bindtap="resetFilters">重置筛选</button>
+    <button class="btn btn-primary" bindtap="applyFilters">应用筛选</button>
+  </view>
+</view>

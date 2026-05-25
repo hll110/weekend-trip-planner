@@ -7,14 +7,14 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#4f46e5",
-    "navigationBarTitleText": "周边游助手",
+    "navigationBarBackgroundColor": "#c41e2a",
+    "navigationBarTitleText": "重庆周边游",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#f8fafc"
+    "backgroundColor": "#fef7f0"
   },
   "tabBar": {
     "color": "#94a3b8",
-    "selectedColor": "#4f46e5",
+    "selectedColor": "#c41e2a",
     "backgroundColor": "#ffffff",
     "borderStyle": "white",
     "list": [
@@ -34,7 +34,7 @@
   },
   "permission": {
     "scope.userLocation": {
-      "desc": "用于获取您的位置，推荐附近景点和美食"
+      "desc": "用于获取您的位置，推荐重庆周边景点和美食"
     }
   },
   "requiredPrivateInfos": ["getLocation", "chooseLocation"],

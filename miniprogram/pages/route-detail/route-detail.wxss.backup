@@ -74,7 +74,7 @@
 }
 
 .route-type-badge.scenic {
-  background: linear-gradient(135deg, #c41e2a 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
 }
 
 /* 路线信息 */
@@ -99,7 +99,7 @@
   display: flex;
   align-items: center;
   gap: 8rpx;
-  color: #c41e2a;
+  color: #4f46e5;
   font-size: 26rpx;
   font-weight: 500;
 }
@@ -127,7 +127,7 @@
 .stat-value {
   font-size: 36rpx;
   font-weight: 600;
-  color: #c41e2a;
+  color: #4f46e5;
   margin-bottom: 8rpx;
 }
 
@@ -179,7 +179,7 @@
 .spot-index {
   width: 48rpx;
   height: 48rpx;
-  background: linear-gradient(135deg, #c41e2a 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -276,7 +276,7 @@
 
 .food-spot-type {
   font-size: 24rpx;
-  color: #c41e2a;
+  color: #4f46e5;
   background: #eef2ff;
   padding: 4rpx 12rpx;
   border-radius: 12rpx;
@@ -322,10 +322,10 @@
   top: 8rpx;
   width: 16rpx;
   height: 16rpx;
-  background: #c41e2a;
+  background: #4f46e5;
   border-radius: 50%;
   border: 4rpx solid white;
-  box-shadow: 0 0 0 2rpx #c41e2a;
+  box-shadow: 0 0 0 2rpx #4f46e5;
 }
 
 .timeline-content {
@@ -336,7 +336,7 @@
 
 .timeline-time {
   font-size: 24rpx;
-  color: #c41e2a;
+  color: #4f46e5;
   font-weight: 500;
   margin-bottom: 8rpx;
 }

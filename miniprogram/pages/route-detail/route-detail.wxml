@@ -24,7 +24,7 @@
       <view class="info-header">
         <view class="info-title">路线信息</view>
         <view class="info-duration">
-          <icon type="time" size="14" color="#4f46e5"/>
+          <icon type="time" size="14" color="#c41e2a"/>
           <text>{{route.duration === '1day' ? '1日游' : '2日游'}}</text>
         </view>
       </view>

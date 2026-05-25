@@ -41,36 +41,26 @@
 .location-change {
   display: flex;
   align-items: center;
-  color: #4f46e5;
+  color: #c41e2a;
   font-size: 26rpx;
   font-weight: 500;
   gap: 4rpx;
 }
 
-/* 天气信息 */
-.weather-info {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+/* 重庆特色标语 */
+.chongqing-slogan {
+  background: linear-gradient(135deg, #c41e2a 0%, #e53e3e 100%);
   border-radius: 16rpx;
   padding: 20rpx 24rpx;
+  margin-top: 16rpx;
+  text-align: center;
+}
+
+.slogan-text {
   color: white;
-}
-
-.weather-temp {
-  font-size: 48rpx;
-  font-weight: 600;
-  margin-right: 20rpx;
-}
-
-.weather-desc {
   font-size: 28rpx;
-  margin-right: 20rpx;
-}
-
-.weather-humidity {
-  font-size: 24rpx;
-  opacity: 0.9;
+  font-weight: 500;
+  letter-spacing: 2rpx;
 }
 
 /* 筛选条件 */
@@ -98,14 +88,14 @@
   border-radius: 30rpx;
   font-size: 26rpx;
   color: #64748b;
-  border: 2rpx solid #e2e8f0;
+  border: 2rpx solid #fef2f2;
   transition: all 0.3s ease;
 }
 
 .filter-tag.active {
-  background: #4f46e5;
+  background: #c41e2a;
   color: white;
-  border-color: #4f46e5;
+  border-color: #c41e2a;
 }
 
 .duration-tags {
@@ -119,14 +109,14 @@
   border-radius: 30rpx;
   font-size: 26rpx;
   color: #64748b;
-  border: 2rpx solid #e2e8f0;
+  border: 2rpx solid #fef2f2;
   transition: all 0.3s ease;
 }
 
 .duration-tag.active {
-  background: #7c3aed;
+  background: #dd6b20;
   color: white;
-  border-color: #7c3aed;
+  border-color: #dd6b20;
 }
 
 /* 路线部分 */
@@ -162,7 +152,7 @@
 .route-image {
   position: relative;
   height: 300rpx;
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #c41e2a 0%, #e53e3e 50%, #dd6b20 100%);
 }
 
 .route-img {
@@ -183,15 +173,15 @@
 }
 
 .route-type-badge.food {
-  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+  background: linear-gradient(135deg, #c41e2a 0%, #e53e3e 100%);
 }
 
 .route-type-badge.hiking {
-  background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
+  background: linear-gradient(135deg, #38a169 0%, #48bb78 100%);
 }
 
 .route-type-badge.scenic {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #dd6b20 0%, #ed8936 100%);
 }
 
 .route-duration-badge {
@@ -238,7 +228,7 @@
 .rating-text {
   font-size: 28rpx;
   font-weight: 600;
-  color: #f59e0b;
+  color: #d69e2e;
 }
 
 .review-count {
@@ -276,14 +266,14 @@
 
 .highlight-tag {
   padding: 8rpx 16rpx;
-  background: #eef2ff;
-  color: #4f46e5;
+  background: #fef2f2;
+  color: #c41e2a;
   border-radius: 16rpx;
   font-size: 24rpx;
 }
 
 .route-food {
-  background: #f8fafc;
+  background: #fef7f0;
   border-radius: 12rpx;
   padding: 16rpx;
 }
@@ -303,8 +293,8 @@
 
 .food-list text {
   padding: 8rpx 16rpx;
-  background: #fffbeb;
-  color: #f59e0b;
+  background: #fffaf0;
+  color: #dd6b20;
   border-radius: 16rpx;
   font-size: 24rpx;
 }
@@ -316,7 +306,7 @@
   background: white;
   border-radius: 20rpx;
   padding: 32rpx 24rpx;
-  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4rpx 20rpx rgba(196, 30, 42, 0.1);
 }
 
 .action-item {

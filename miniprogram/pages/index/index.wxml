@@ -11,15 +11,13 @@
       </view>
       <view class="location-change" bindtap="changeLocation">
         <text>更换</text>
-        <icon type="right" size="14" color="#4f46e5"/>
+        <icon type="right" size="14" color="#c41e2a"/>
       </view>
     </view>
     
-    <!-- 天气信息 -->
-    <view class="weather-info" wx:if="{{weather}}">
-      <view class="weather-temp">{{weather.temp}}°C</view>
-      <view class="weather-desc">{{weather.description}}</view>
-      <view class="weather-humidity">湿度: {{weather.humidity}}%</view>
+    <!-- 重庆特色标语 -->
+    <view class="chongqing-slogan">
+      <text class="slogan-text">重庆周边游 · 发现山城之美</text>
     </view>
   </view>
   
@@ -31,13 +29,13 @@
         全部
       </view>
       <view class="filter-tag {{filters.type === 'food' ? 'active' : ''}}" bindtap="setTypeFilter" data-type="food">
-        🍽️ 美食优先
+        🍲 火锅美食
       </view>
       <view class="filter-tag {{filters.type === 'hiking' ? 'active' : ''}}" bindtap="setTypeFilter" data-type="hiking">
-        🥾 徒步路线
+        ⛰️ 山城徒步
       </view>
       <view class="filter-tag {{filters.type === 'scenic' ? 'active' : ''}}" bindtap="setTypeFilter" data-type="scenic">
-        🏞️ 景区优先
+        🏞️ 景区观光
       </view>
     </view>
     
@@ -57,7 +55,7 @@
   <!-- 推荐路线 -->
   <view class="routes-section">
     <view class="section-header">
-      <view class="section-title">推荐路线</view>
+      <view class="section-title">🔥 热门路线</view>
       <view class="section-count">共{{filteredRoutes.length}}条路线</view>
     </view>
     
@@ -103,7 +101,7 @@
           </view>
           
           <view class="route-food">
-            <view class="food-title">🍽️ 特色美食:</view>
+            <view class="food-title">🍲 特色美食:</view>
             <view class="food-list">
               <text wx:for="{{item.food}}" wx:for-item="foodItem" wx:key="*this">{{foodItem}}</text>
             </view>

@@ -1,7 +1,7 @@
 {
-  "name": "weekend-trip-planner",
+  "name": "chongqing-trip",
   "version": "1.0.0",
-  "description": "周边游助手微信小程序 - 周末出行计划推荐",
+  "description": "重庆周边游微信小程序 - 重庆及周边地区短途旅行推荐",
   "main": "miniprogram/app.js",
   "scripts": {
     "dev": "echo \"请使用微信开发者工具打开项目\"",
@@ -13,10 +13,12 @@
     "wechat",
     "miniprogram",
     "travel",
-    "weekend",
+    "chongqing",
     "trip",
+    "重庆",
     "周边游",
-    "周末出行"
+    "火锅",
+    "山城"
   ],
   "author": "",
   "license": "MIT",

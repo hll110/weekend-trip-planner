@@ -10,7 +10,7 @@
     <view class="current-header">
       <view class="current-title">当前位置</view>
       <view class="current-refresh" bindtap="refreshLocation">
-        <icon type="refresh" size="14" color="#4f46e5"/>
+        <icon type="refresh" size="14" color="#c41e2a"/>
         <text>刷新</text>
       </view>
     </view>
@@ -23,7 +23,7 @@
       </view>
       <view class="current-use" bindtap="useCurrentLocation">
         <text>使用此位置</text>
-        <icon type="right" size="14" color="#4f46e5"/>
+        <icon type="right" size="14" color="#c41e2a"/>
       </view>
     </view>
   </view>

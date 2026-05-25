@@ -45,7 +45,7 @@
 }
 
 .type-option.active {
-  border-color: #c41e2a;
+  border-color: #4f46e5;
   background: #eef2ff;
 }
 
@@ -148,7 +148,7 @@
 .preview-count {
   font-size: 32rpx;
   font-weight: 600;
-  color: #c41e2a;
+  color: #4f46e5;
   margin-bottom: 16rpx;
 }
 

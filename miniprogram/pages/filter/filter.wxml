@@ -1,8 +1,8 @@
 <!--pages/filter/filter.wxml-->
 <view class="container">
   <view class="filter-header">
-    <view class="filter-title">高级筛选</view>
-    <view class="filter-subtitle">根据您的偏好推荐最合适的路线</view>
+    <view class="filter-title">重庆周边游筛选</view>
+    <view class="filter-subtitle">发现最适合您的重庆周边路线</view>
   </view>
   
   <!-- 路线类型 -->
@@ -15,19 +15,19 @@
         <view class="type-desc">不限制路线类型</view>
       </view>
       <view class="type-option {{filters.type === 'food' ? 'active' : ''}}" bindtap="setType" data-type="food">
-        <view class="type-icon">🍽️</view>
-        <view class="type-name">美食优先</view>
-        <view class="type-desc">以美食探索为主</view>
+        <view class="type-icon">🍲</view>
+        <view class="type-name">火锅美食</view>
+        <view class="type-desc">品尝重庆火锅和特色小吃</view>
       </view>
       <view class="type-option {{filters.type === 'hiking' ? 'active' : ''}}" bindtap="setType" data-type="hiking">
-        <view class="type-icon">🥾</view>
-        <view class="type-name">徒步路线</view>
-        <view class="type-desc">适合徒步和户外</view>
+        <view class="type-icon">⛰️</view>
+        <view class="type-name">山城徒步</view>
+        <view class="type-desc">探索重庆山城特色路线</view>
       </view>
       <view class="type-option {{filters.type === 'scenic' ? 'active' : ''}}" bindtap="setType" data-type="scenic">
         <view class="type-icon">🏞️</view>
-        <view class="type-name">景区优先</view>
-        <view class="type-desc">以景点观光为主</view>
+        <view class="type-name">景区观光</view>
+        <view class="type-desc">游览重庆及周边著名景点</view>
       </view>
     </view>
   </view>
@@ -43,12 +43,12 @@
       <view class="duration-option {{filters.duration === '1day' ? 'active' : ''}}" bindtap="setDuration" data-duration="1day">
         <view class="duration-icon">📅</view>
         <view class="duration-name">1日游</view>
-        <view class="duration-desc">适合周末一天</view>
+        <view class="duration-desc">重庆市区一日游</view>
       </view>
       <view class="duration-option {{filters.duration === '2day' ? 'active' : ''}}" bindtap="setDuration" data-duration="2day">
         <view class="duration-icon">📆</view>
         <view class="duration-name">2日游</view>
-        <view class="duration-desc">适合周末两天</view>
+        <view class="duration-desc">重庆周边两日深度游</view>
       </view>
     </view>
   </view>
@@ -59,15 +59,15 @@
     <view class="other-options">
       <view class="other-option">
         <view class="option-label">优先显示评价高的路线</view>
-        <switch checked="{{filters.highRating}}" bindchange="toggleHighRating" color="#4f46e5"/>
+        <switch checked="{{filters.highRating}}" bindchange="toggleHighRating" color="#c41e2a"/>
       </view>
       <view class="other-option">
         <view class="option-label">包含特色美食推荐</view>
-        <switch checked="{{filters.includeFood}}" bindchange="toggleIncludeFood" color="#4f46e5"/>
+        <switch checked="{{filters.includeFood}}" bindchange="toggleIncludeFood" color="#c41e2a"/>
       </view>
       <view class="other-option">
         <view class="option-label">包含详细行程安排</view>
-        <switch checked="{{filters.includeSchedule}}" bindchange="toggleIncludeSchedule" color="#4f46e5"/>
+        <switch checked="{{filters.includeSchedule}}" bindchange="toggleIncludeSchedule" color="#c41e2a"/>
       </view>
     </view>
   </view>

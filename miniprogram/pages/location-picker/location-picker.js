@@ -11,12 +11,12 @@ Page({
     searchResults: [],
     searchHistory: [],
     hotLocations: [
-      { id: 1, name: '天安门广场', address: '北京市东城区', icon: '🏛️' },
-      { id: 2, name: '外滩', address: '上海市黄浦区', icon: '🌃' },
-      { id: 3, name: '西湖', address: '浙江省杭州市', icon: '🏞️' },
-      { id: 4, name: '夫子庙', address: '江苏省南京市', icon: '🏯' },
-      { id: 5, name: '鼓浪屿', address: '福建省厦门市', icon: '🏖️' },
-      { id: 6, name: '兵马俑', address: '陕西省西安市', icon: '🗿' }
+      { id: 1, name: '解放碑', address: '重庆市渝中区', icon: '🏛️', latitude: 29.556, longitude: 106.577 },
+      { id: 2, name: '洪崖洞', address: '重庆市渝中区', icon: '🌃', latitude: 29.564, longitude: 106.579 },
+      { id: 3, name: '磁器口古镇', address: '重庆市沙坪坝区', icon: '🏯', latitude: 29.580, longitude: 106.448 },
+      { id: 4, name: '李子坝轻轨站', address: '重庆市渝中区', icon: '🚇', latitude: 29.553, longitude: 106.537 },
+      { id: 5, name: '南山一棵树', address: '重庆市南岸区', icon: '🌲', latitude: 29.523, longitude: 106.607 },
+      { id: 6, name: '武隆游客中心', address: '重庆市武隆区', icon: '⛰️', latitude: 29.325, longitude: 107.760 }
     ],
     isLoading: false
   },
@@ -82,16 +82,10 @@ Page({
       latitude: location.latitude,
       longitude: location.longitude
     };
-    
-    // 返回上一页
-    wx.navigateBack({
-      delta: 1
-    });
-    
-    wx.showToast({
-      title: '已使用当前位置',
-      icon: 'success'
-    });
+    app.loadRoutes();
+
+    wx.navigateBack({ delta: 1 });
+    wx.showToast({ title: '已使用当前位置', icon: 'success' });
   },
 
   onSearch: function(e) {
@@ -115,9 +109,9 @@ Page({
     // 模拟搜索结果
     setTimeout(() => {
       const mockResults = [
-        { id: 1, name: `${keyword}附近`, address: '北京市东城区', distance: '1.2km' },
-        { id: 2, name: `${keyword}景区`, address: '北京市西城区', distance: '2.5km' },
-        { id: 3, name: `${keyword}公园`, address: '北京市朝阳区', distance: '3.8km' }
+        { id: 1, name: `${keyword}（渝中区）`, address: '重庆市渝中区', distance: '1.2km', latitude: 29.556, longitude: 106.577 },
+        { id: 2, name: `${keyword}（南岸区）`, address: '重庆市南岸区', distance: '2.5km', latitude: 29.523, longitude: 106.607 },
+        { id: 3, name: `${keyword}（沙坪坝区）`, address: '重庆市沙坪坝区', distance: '3.8km', latitude: 29.580, longitude: 106.448 }
       ];
       
       that.setData({
@@ -145,19 +139,13 @@ Page({
       ...app.globalData.location,
       name: location.name,
       address: location.address,
-      latitude: location.latitude || 39.9042,
-      longitude: location.longitude || 116.4074
+      latitude: location.latitude || 29.563,
+      longitude: location.longitude || 106.551
     };
-    
-    // 返回上一页
-    wx.navigateBack({
-      delta: 1
-    });
-    
-    wx.showToast({
-      title: '位置已选择',
-      icon: 'success'
-    });
+    app.loadRoutes();
+
+    wx.navigateBack({ delta: 1 });
+    wx.showToast({ title: '位置已选择', icon: 'success' });
   },
 
   selectHistory: function(e) {

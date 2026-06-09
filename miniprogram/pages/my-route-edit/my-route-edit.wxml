@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="form card">
+    <view class="field">
+      <text class="label">路线名称 *</text>
+      <input placeholder="如：我的周末徒步线" data-field="name" bindinput="onInput" value="{{form.name}}"/>
+    </view>
+    <view class="field">
+      <text class="label">路线描述 *</text>
+      <textarea placeholder="介绍一下这条路线" data-field="description" bindinput="onInput" value="{{form.description}}"/>
+    </view>
+    <view class="field">
+      <text class="label">类型</text>
+      <view class="chips">
+        <view class="chip {{form.type === 'scenic' ? 'on' : ''}}" data-type="scenic" bindtap="setType">景区</view>
+        <view class="chip {{form.type === 'food' ? 'on' : ''}}" data-type="food" bindtap="setType">美食</view>
+        <view class="chip {{form.type === 'hiking' ? 'on' : ''}}" data-type="hiking" bindtap="setType">徒步</view>
+      </view>
+    </view>
+    <view class="field">
+      <text class="label">时长</text>
+      <view class="chips">
+        <view class="chip {{form.duration === '1day' ? 'on' : ''}}" data-duration="1day" bindtap="setDuration">1日游</view>
+        <view class="chip {{form.duration === '2day' ? 'on' : ''}}" data-duration="2day" bindtap="setDuration">2日游</view>
+      </view>
+    </view>
+    <view class="field">
+      <text class="label">所在区县</text>
+      <picker mode="selector" range="{{districts}}" range-key="name" bindchange="setDistrict" data-id="">
+        <view class="picker-val">选择区县（当前：{{form.district}}）</view>
+      </picker>
+      <view class="chip-scroll">
+        <view class="chip small {{form.district === item.id ? 'on' : ''}}" wx:for="{{districts}}" wx:key="id"
+          data-id="{{item.id}}" bindtap="setDistrict">{{item.name}}</view>
+      </view>
+    </view>
+    <view class="field">
+      <text class="label">亮点（逗号分隔）</text>
+      <input placeholder="洪崖洞,长江索道" data-field="highlights" bindinput="onInput" value="{{form.highlights}}"/>
+    </view>
+    <view class="field">
+      <text class="label">美食（逗号分隔）</text>
+      <input placeholder="火锅,小面" data-field="food" bindinput="onInput" value="{{form.food}}"/>
+    </view>
+    <view class="field">
+      <text class="label">地图选点</text>
+      <button class="btn btn-outline" bindtap="pickLocation">{{form.spotName || '点击选择主要景点位置'}}</button>
+    </view>
+  </view>
+  <button class="btn btn-primary" bindtap="submit">发布到我的路线</button>
+</view>

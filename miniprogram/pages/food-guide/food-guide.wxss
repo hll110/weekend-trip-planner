@@ -1,0 +1,7 @@
+.search-bar input { width: 100%; font-size: 28rpx; }
+.food-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12rpx; }
+.food-name { font-size: 32rpx; font-weight: 600; color: #c41e2a; }
+.food-type { font-size: 24rpx; color: #dd6b20; background: #fff7ed; padding: 6rpx 16rpx; border-radius: 8rpx; }
+.food-desc { font-size: 26rpx; color: #64748b; margin-bottom: 12rpx; }
+.food-meta { display: flex; justify-content: space-between; font-size: 24rpx; color: #94a3b8; }
+.food-price { color: #c41e2a; font-weight: 500; }

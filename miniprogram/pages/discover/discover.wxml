@@ -1,0 +1,61 @@
+<view class="container page-discover">
+  <view class="weather-card card" wx:if="{{weather}}">
+    <view class="weather-main">
+      <text class="weather-icon">{{weather.icon}}</text>
+      <view class="weather-info">
+        <view class="weather-city">重庆出行天气</view>
+        <view class="weather-temp">{{weather.temp}}°C · {{weather.description}}</view>
+        <view class="weather-sub">湿度 {{weather.humidity}}% · {{weather.seasonName}} · {{weather.tempRange}}</view>
+      </view>
+    </view>
+    <view class="weather-tip">💡 {{weather.travelTip}}</view>
+  </view>
+
+  <view class="dialect-card card" wx:if="{{dialect}}" bindtap="pickDialect">
+    <view class="section-title">🗣️ 重庆方言一刻</view>
+    <view class="dialect-phrase">{{dialect.phrase}}</view>
+    <view class="dialect-meaning">{{dialect.meaning}}</view>
+    <view class="dialect-scene">场景：{{dialect.scene}} · 点击换一句</view>
+  </view>
+
+  <view class="menu-grid">
+    <view class="menu-item card" bindtap="goFood">
+      <text class="menu-icon">🍲</text>
+      <text class="menu-name">特色美食</text>
+    </view>
+    <view class="menu-item card" bindtap="goCulture">
+      <text class="menu-icon">📜</text>
+      <text class="menu-name">巴渝文化</text>
+    </view>
+    <view class="menu-item card" bindtap="goMyRoutes">
+      <text class="menu-icon">✏️</text>
+      <text class="menu-name">我的路线</text>
+    </view>
+  </view>
+
+  <view class="section card">
+    <view class="section-title">🎉 节日活动</view>
+    <view class="festival-item" wx:for="{{festivals}}" wx:key="id" bindtap="goFestivalRoutes" data-id="{{item.id}}">
+      <view class="festival-name">{{item.name}}</view>
+      <view class="festival-meta">{{item.period}} · {{item.district}}</view>
+      <view class="festival-desc">{{item.desc}}</view>
+    </view>
+  </view>
+
+  <view class="section card">
+    <view class="section-title">🌸 季节推荐 · 点击筛选</view>
+    <view class="chip-row">
+      <view class="chip" bindtap="filterBySeason" data-id="spring">春季</view>
+      <view class="chip" bindtap="filterBySeason" data-id="summer">夏季</view>
+      <view class="chip" bindtap="filterBySeason" data-id="autumn">秋季</view>
+      <view class="chip" bindtap="filterBySeason" data-id="winter">冬季</view>
+    </view>
+  </view>
+
+  <view class="section card">
+    <view class="section-title">📍 区县速览（共{{districtTotal}}个区县）</view>
+    <view class="chip-row wrap">
+      <view class="chip small" wx:for="{{districts}}" wx:key="id" bindtap="filterByDistrict" data-id="{{item.id}}">{{item.name}}</view>
+    </view>
+  </view>
+</view>

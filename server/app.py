@@ -3,6 +3,8 @@ from flask_cors import CORS
 import json
 import os
 import random
+from datetime import datetime
+from extensions_data import DISTRICTS, SEASONS, FESTIVALS, MONTH_WEATHER, get_season
 
 app = Flask(__name__)
 CORS(app)
@@ -60,7 +62,7 @@ ROUTES_DATA = load_routes_data()
 @app.route('/')
 def index():
     return jsonify({
-        "message": "重庆周边游API服务",
+        "message": "渝趣周边游API服务",
         "version": "1.0.0",
         "total_routes": len(ROUTES_DATA),
         "endpoints": [
@@ -84,17 +86,23 @@ def get_routes():
     lon = request.args.get('lon', type=float)
     route_type = request.args.get('type', 'all')
     duration = request.args.get('duration', 'all')
-    limit = request.args.get('limit', 10, type=int)
+    district = request.args.get('district', 'all')
+    season = request.args.get('season', 'all')
+    festival = request.args.get('festival', 'all')
+    limit = request.args.get('limit', 50, type=int)
     
     routes = ROUTES_DATA.copy()
     
-    # 按类型筛选
     if route_type and route_type != 'all':
-        routes = [r for r in routes if r['type'] == route_type]
-    
-    # 按时长筛选
+        routes = [r for r in routes if r.get('type') == route_type]
     if duration and duration != 'all':
-        routes = [r for r in routes if r['duration'] == duration]
+        routes = [r for r in routes if r.get('duration') == duration]
+    if district and district != 'all':
+        routes = [r for r in routes if r.get('district') == district]
+    if season and season != 'all':
+        routes = [r for r in routes if season in r.get('seasons', [])]
+    if festival and festival != 'all':
+        routes = [r for r in routes if festival in r.get('festivals', [])]
     
     # 如果提供了位置，按距离排序（模拟）
     if lat and lon:
@@ -111,8 +119,39 @@ def get_routes():
         "filters": {
             "type": route_type,
             "duration": duration,
+            "district": district,
+            "season": season,
+            "festival": festival,
             "location": {"lat": lat, "lon": lon} if lat and lon else None
         }
+    })
+
+
+@app.route('/api/weather', methods=['GET'])
+def get_weather():
+    """重庆出行天气（按月模拟）"""
+    month = request.args.get('month', datetime.now().month, type=int)
+    profile = MONTH_WEATHER.get(month) or MONTH_WEATHER[4]
+    season = get_season(month)
+    return jsonify({
+        "city": "重庆",
+        "month": month,
+        "season": season,
+        "temp": profile["temp"],
+        "description": profile["desc"],
+        "humidity": profile["humidity"],
+        "icon": profile["icon"],
+        "travelTip": profile["tip"]
+    })
+
+
+@app.route('/api/extensions', methods=['GET'])
+def get_extensions():
+    """扩展内容：区县、季节、节日等"""
+    return jsonify({
+        "districts": DISTRICTS,
+        "seasons": SEASONS,
+        "festivals": FESTIVALS
     })
 
 @app.route('/api/routes/<int:route_id>', methods=['GET'])
@@ -197,6 +236,6 @@ def get_stats():
     })
 
 if __name__ == '__main__':
-    print(f"重庆周边游API服务启动")
+    print(f"渝趣周边游API服务启动")
     print(f"加载路线数据: {len(ROUTES_DATA)}条")
     app.run(host='0.0.0.0', port=9091, debug=True)

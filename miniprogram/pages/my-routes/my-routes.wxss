@@ -1,0 +1,9 @@
+.add-btn { margin-bottom: 24rpx; }
+.route-item { display: flex; align-items: center; justify-content: space-between; }
+.route-main { flex: 1; }
+.route-name { font-size: 30rpx; font-weight: 600; color: #1e293b; }
+.route-desc { font-size: 26rpx; color: #64748b; margin: 8rpx 0; }
+.route-del { color: #e53e3e; font-size: 26rpx; padding: 16rpx; }
+.empty { text-align: center; color: #94a3b8; padding: 48rpx; }
+.empty-icon { display: block; font-size: 64rpx; margin-bottom: 16rpx; }
+.tag { display: inline-block; margin-right: 12rpx; font-size: 22rpx; background: #fef2f2; color: #c41e2a; padding: 4rpx 12rpx; border-radius: 8rpx; }

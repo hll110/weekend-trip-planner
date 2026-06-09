@@ -1,5 +1,6 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "高级筛选",
+  "navigationBarTitleText": "筛选路线",
+  "disableScroll": true,
   "enablePullDownRefresh": false
 }

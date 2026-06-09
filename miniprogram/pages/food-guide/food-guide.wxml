@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="search-bar card">
+    <input placeholder="搜索美食、区县、类型" bindinput="onSearch" value="{{keyword}}"/>
+  </view>
+  <view class="food-card card" wx:for="{{foods}}" wx:key="name">
+    <view class="food-head">
+      <text class="food-name">{{item.name}}</text>
+      <text class="food-type">{{item.type}}</text>
+    </view>
+    <view class="food-desc">{{item.desc}}</view>
+    <view class="food-meta">
+      <text>📍 {{item.district}}</text>
+      <text class="food-price">{{item.price}}</text>
+    </view>
+  </view>
+</view>

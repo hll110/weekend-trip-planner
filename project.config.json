@@ -1,17 +1,20 @@
 {
-  "description": "周边游助手微信小程序项目",
+  "description": "渝趣周边游微信小程序项目",
+  "miniprogramRoot": "miniprogram/",
   "packOptions": {
     "ignore": [
-      {
-        "type": "file",
-        "value": ".gitignore"
-      }
-    ]
+      { "type": "folder", "value": "server" },
+      { "type": "file", "value": ".gitignore" },
+      { "type": "file", "value": "README.md" },
+      { "type": "file", "value": "start.sh" },
+      { "type": "file", "value": "路线清单.md" }
+    ],
+    "include": []
   },
   "setting": {
     "bundle": false,
     "userConfirmedBundleSwitch": false,
-    "urlCheck": true,
+    "urlCheck": false,
     "scopeDataCheck": false,
     "coverView": true,
     "es6": true,
@@ -23,7 +26,7 @@
     "autoAudits": false,
     "newFeature": false,
     "uglifyFileName": false,
-    "uploadWithSourceMap": true,
+    "uploadWithSourceMap": false,
     "useIsolateContext": true,
     "nodeModules": false,
     "enhance": true,
@@ -37,15 +40,23 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "compileWorklet": false,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.4",
-  "appid": "wxxxxxxxxxxx",
-  "projectname": "chongqing-trip",
+  "libVersion": "3.16.1",
+  "appid": "wxdbcd38d59fda76a9",
+  "projectname": "yuqu-trip",
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "simulatorPluginLibVersion": {}
 }

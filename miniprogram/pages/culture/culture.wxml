@@ -1,0 +1,13 @@
+<view class="container">
+  <scroll-view class="tabs" scroll-x>
+    <view class="tab {{activeId === item.id ? 'active' : ''}}" wx:for="{{articles}}" wx:key="id"
+      bindtap="selectArticle" data-id="{{item.id}}">{{item.title}}</view>
+  </scroll-view>
+  <block wx:for="{{articles}}" wx:key="id">
+    <view class="article card" wx:if="{{activeId === item.id}}">
+      <view class="article-title">{{item.title}}</view>
+      <view class="article-summary">{{item.summary}}</view>
+      <view class="article-content">{{item.content}}</view>
+    </view>
+  </block>
+</view>

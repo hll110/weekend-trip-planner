@@ -1,182 +1,153 @@
-// pages/index/index.js
 const app = getApp();
+const weatherUtil = require('../../utils/weather.js');
+const routeFilter = require('../../utils/route-filter.js');
+const nav = require('../../utils/nav.js');
+const tabBar = require('../../utils/tab-bar.js');
+const { districts } = require('../../data/extensions.js');
 
 Page({
   data: {
-    location: {
-      name: '正在获取位置...',
-      address: ''
-    },
+    location: { name: '正在获取位置...', address: '' },
     weather: null,
+    dialect: null,
     routes: [],
     filteredRoutes: [],
-    filters: {
-      type: 'all',
-      duration: 'all'
-    },
+    activeFilterLabels: [],
+    districtOptions: districts.filter((d) => d.id !== 'all').slice(0, 12),
+    filters: app.getDefaultFilters(),
     isLoading: true
   },
 
-  onLoad: function() {
+  onLoad() {
+    this.syncPageState();
+    this.loadWeather();
+    this.bindRoutesCallback();
+  },
+
+  onShow() {
+    tabBar.setTabSelected(this, 0);
+    this.syncPageState();
+  },
+
+  /** 单次 setData：同步筛选结果，避免 setData 异步导致筛选失效 */
+  syncPageState() {
+    const filters = { ...app.globalData.filters };
+    const routes = app.globalData.routes || [];
+    const filteredRoutes = routeFilter.applyFilters(routes, filters);
     this.setData({
       location: app.globalData.location,
-      filters: app.globalData.filters
+      filters,
+      routes,
+      filteredRoutes,
+      activeFilterLabels: this.buildFilterLabels(filters),
+      isLoading: !app.globalData.routesReady && routes.length === 0
     });
-    
-    this.loadWeather();
-    this.loadRoutes();
   },
 
-  onShow: function() {
-    // 每次显示页面时刷新数据
-    if (app.globalData.routes && app.globalData.routes.length > 0) {
-      this.filterRoutes();
-    }
-  },
-
-  loadWeather: function() {
-    const that = this;
-    const { latitude, longitude } = app.globalData.location;
-    
-    // 模拟天气数据
-    const mockWeather = {
-      temp: 22,
-      description: '晴朗',
-      humidity: 45
-    };
-    
-    this.setData({ weather: mockWeather });
-    
-    // 实际项目中可以调用天气API
-    // app.request({ url: `/weather?lat=${latitude}&lon=${longitude}` })
-    //   .then(res => that.setData({ weather: res.weather }));
-  },
-
-  loadRoutes: function() {
-    const that = this;
-    
-    if (app.globalData.routes && app.globalData.routes.length > 0) {
-      this.setData({
-        routes: app.globalData.routes,
-        isLoading: false
-      });
-      this.filterRoutes();
-    } else {
-      // 设置数据加载回调
-      app.routesLoadedCallback = (routes) => {
-        that.setData({
-          routes: routes,
-          isLoading: false
-        });
-        that.filterRoutes();
-      };
-      
-      // 超时处理
-      setTimeout(() => {
-        if (that.data.isLoading) {
-          that.setData({ isLoading: false });
-          that.filterRoutes();
-        }
-      }, 2000);
-    }
-  },
-
-  filterRoutes: function() {
-    const { routes, filters } = this.data;
-    
-    let filtered = routes;
-    
-    // 按类型筛选
-    if (filters.type && filters.type !== 'all') {
-      filtered = filtered.filter(route => route.type === filters.type);
-    }
-    
-    // 按时长筛选
+  buildFilterLabels(filters) {
+    const labels = [];
+    const typeMap = { food: '火锅美食', hiking: '山城徒步', scenic: '景区观光' };
+    const seasonMap = { spring: '春季', summer: '夏季', autumn: '秋季', winter: '冬季' };
+    if (filters.type && filters.type !== 'all') labels.push(typeMap[filters.type] || filters.type);
     if (filters.duration && filters.duration !== 'all') {
-      filtered = filtered.filter(route => route.duration === filters.duration);
+      labels.push(filters.duration === '1day' ? '1日游' : '2日游');
     }
-    
-    this.setData({ filteredRoutes: filtered });
-  },
-
-  setTypeFilter: function(e) {
-    const type = e.currentTarget.dataset.type;
-    const filters = { ...this.data.filters, type };
-    
-    this.setData({ filters });
-    app.globalData.filters = filters;
-    this.filterRoutes();
-  },
-
-  setDurationFilter: function(e) {
-    const duration = e.currentTarget.dataset.duration;
-    const filters = { ...this.data.filters, duration };
-    
-    this.setData({ filters });
-    app.globalData.filters = filters;
-    this.filterRoutes();
-  },
-
-  resetFilters: function() {
-    const filters = { type: 'all', duration: 'all' };
-    this.setData({ filters });
-    app.globalData.filters = filters;
-    this.filterRoutes();
-  },
-
-  changeLocation: function() {
-    wx.navigateTo({
-      url: '/pages/location-picker/location-picker'
-    });
-  },
-
-  goToRouteDetail: function(e) {
-    const routeId = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `/pages/route-detail/route-detail?id=${routeId}`
-    });
-  },
-
-  randomRoute: function() {
-    const { filteredRoutes } = this.data;
-    if (filteredRoutes.length === 0) {
-      wx.showToast({
-        title: '暂无可用路线',
-        icon: 'none'
-      });
-      return;
+    if (filters.district && filters.district !== 'all') {
+      const d = districts.find((x) => x.id === filters.district);
+      if (d) labels.push(d.name);
     }
-    
-    const randomIndex = Math.floor(Math.random() * filteredRoutes.length);
-    const randomRoute = filteredRoutes[randomIndex];
-    
-    wx.navigateTo({
-      url: `/pages/route-detail/route-detail?id=${randomRoute.id}`
+    if (filters.season && filters.season !== 'all') labels.push(seasonMap[filters.season]);
+    if (filters.festival && filters.festival !== 'all') labels.push('节日');
+    if (filters.highRating) labels.push('高分');
+    return labels;
+  },
+
+  bindRoutesCallback() {
+    app.routesLoadedCallback = () => this.syncPageState();
+    if (!app.globalData.routesReady) {
+      setTimeout(() => {
+        if (this.data.isLoading) this.syncPageState();
+      }, 1500);
+    }
+  },
+
+  preventTap() {},
+
+  onImageError(e) {
+    const id = Number(e.currentTarget.dataset.id);
+    const imgIndex = Number(e.currentTarget.dataset.index) || 0;
+    const placeholder = '/images/placeholder.png';
+    const routes = this.data.routes.map((r) => {
+      if (Number(r.id) !== id) return r;
+      const images = [...(r.images || [r.image])];
+      images[imgIndex] = placeholder;
+      return { ...r, images, image: images[0], imageCount: images.length };
+    });
+    app.globalData.routes = routes;
+    const filteredRoutes = routeFilter.applyFilters(routes, this.data.filters);
+    this.setData({ routes, filteredRoutes });
+  },
+
+  loadWeather() {
+    this.setData({
+      weather: weatherUtil.getChongqingWeather(),
+      dialect: app.getRandomDialect()
     });
   },
 
-  viewAllRoutes: function() {
-    this.resetFilters();
+  applyFilter(key, value) {
+    const filters = { ...app.globalData.filters, [key]: value };
+    app.globalData.filters = filters;
+    this.syncPageState();
   },
 
-  openFilter: function() {
-    wx.navigateTo({
-      url: '/pages/filter/filter'
-    });
+  setTypeFilter(e) {
+    this.applyFilter('type', e.currentTarget.dataset.type);
   },
 
-  onPullDownRefresh: function() {
-    this.loadRoutes();
+  setDurationFilter(e) {
+    this.applyFilter('duration', e.currentTarget.dataset.duration);
+  },
+
+  setDistrictFilter(e) {
+    this.applyFilter('district', e.currentTarget.dataset.district);
+  },
+
+  setSeasonFilter(e) {
+    this.applyFilter('season', e.currentTarget.dataset.season);
+  },
+
+  resetFilters() {
+    app.globalData.filters = app.getDefaultFilters();
+    this.syncPageState();
+  },
+
+  changeLocation() {
+    nav.open('/pages/location-picker/location-picker');
+  },
+
+  goToRouteDetail(e) {
+    nav.toRouteDetail(e.currentTarget.dataset.id);
+  },
+
+  openFilter() {
+    nav.toFilter();
+  },
+
+  goDiscover() {
+    nav.toDiscover();
+  },
+
+  onPullDownRefresh() {
+    app.reloadAllRoutes();
+    this.loadWeather();
+    this.bindRoutesCallback();
     wx.stopPullDownRefresh();
   },
 
-  onReachBottom: function() {
-    // 可以在这里实现加载更多
-  },
-
-  onShareAppMessage: function() {
+  onShareAppMessage() {
     return {
-      title: '周边游助手 - 周末出行计划推荐',
+      title: '渝趣周边游 - 周末出行推荐',
       path: '/pages/index/index',
       imageUrl: '/images/share-bg.png'
     };

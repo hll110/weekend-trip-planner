@@ -1,0 +1,30 @@
+{
+  "_comment": "复制此对象到 routes.json 的数组末尾，改 id 为不重复数字，保存后重新编译小程序",
+  "id": 99,
+  "name": "路线名称示例",
+  "type": "scenic",
+  "duration": "1day",
+  "district": "yuzhong",
+  "seasons": ["spring", "summer", "autumn", "winter"],
+  "festivals": [],
+  "cultureId": "bayu",
+  "distance": "约20公里",
+  "rating": 4.8,
+  "reviews": 100,
+  "description": "一句话介绍这条路线",
+  "images": [
+    "/packageRoutes/images/routes/99-1.jpg",
+    "/packageRoutes/images/routes/99-2.jpg",
+    "/packageRoutes/images/routes/99-3.jpg"
+  ],
+  "highlights": ["亮点一", "亮点二"],
+  "food": ["特色美食"],
+  "spots": [
+    { "name": "景点名称", "time": "2小时", "ticket": "免费", "lat": 29.563, "lng": 106.551 }
+  ],
+  "foodSpots": [
+    { "name": "餐厅名", "type": "火锅", "price": "人均80元" }
+  ],
+  "tags": ["标签1", "标签2"],
+  "location": { "lat": 29.563, "lng": 106.551 }
+}

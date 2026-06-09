@@ -1,0 +1,20 @@
+<view class="container">
+  <button class="btn btn-primary add-btn" bindtap="goAdd">+ 分享我的路线</button>
+  <view wx:if="{{list.length > 0}}">
+    <view class="route-item card" wx:for="{{list}}" wx:key="id">
+      <view class="route-main" bindtap="goDetail" data-id="{{item.id}}">
+        <view class="route-name">{{item.name}}</view>
+        <view class="route-desc">{{item.description}}</view>
+        <view class="route-tags">
+          <text class="tag">用户分享</text>
+          <text class="tag">{{item.duration === '1day' ? '1日游' : '2日游'}}</text>
+        </view>
+      </view>
+      <view class="route-del" bindtap="deleteRoute" data-id="{{item.id}}">删除</view>
+    </view>
+  </view>
+  <view wx:else class="empty card">
+    <text class="empty-icon">✏️</text>
+    <text>还没有分享路线，点击上方按钮添加</text>
+  </view>
+</view>

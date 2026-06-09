@@ -1,114 +1,83 @@
-// pages/filter/filter.js
 const app = getApp();
+const routeFilter = require('../../utils/route-filter.js');
+const nav = require('../../utils/nav.js');
+const tabBar = require('../../utils/tab-bar.js');
+const { districts, seasons, festivals } = require('../../data/extensions.js');
 
 Page({
   data: {
-    filters: {
-      type: 'all',
-      duration: 'all',
-      highRating: true,
-      includeFood: true,
-      includeSchedule: true
-    },
+    filters: {},
+    districts,
+    seasons,
+    festivals,
     filteredCount: 0,
     previewRoutes: []
   },
 
-  onLoad: function() {
-    this.setData({
-      filters: { ...app.globalData.filters }
-    });
-    this.updatePreview();
+  onLoad() {
+    this.refreshPreview(app.globalData.filters);
   },
 
-  setType: function(e) {
-    const type = e.currentTarget.dataset.type;
-    const filters = { ...this.data.filters, type };
-    this.setData({ filters });
-    this.updatePreview();
+  onShow() {
+    tabBar.setTabSelected(this, 2);
+    this.refreshPreview(app.globalData.filters);
   },
 
-  setDuration: function(e) {
-    const duration = e.currentTarget.dataset.duration;
-    const filters = { ...this.data.filters, duration };
-    this.setData({ filters });
-    this.updatePreview();
-  },
-
-  toggleHighRating: function(e) {
-    const filters = { ...this.data.filters, highRating: e.detail.value };
-    this.setData({ filters });
-    this.updatePreview();
-  },
-
-  toggleIncludeFood: function(e) {
-    const filters = { ...this.data.filters, includeFood: e.detail.value };
-    this.setData({ filters });
-    this.updatePreview();
-  },
-
-  toggleIncludeSchedule: function(e) {
-    const filters = { ...this.data.filters, includeSchedule: e.detail.value };
-    this.setData({ filters });
-    this.updatePreview();
-  },
-
-  updatePreview: function() {
+  refreshPreview(filters) {
+    const f = { ...filters };
     const routes = app.globalData.routes || [];
-    const { filters } = this.data;
-    
-    let filtered = routes;
-    
-    // 按类型筛选
-    if (filters.type && filters.type !== 'all') {
-      filtered = filtered.filter(route => route.type === filters.type);
-    }
-    
-    // 按时长筛选
-    if (filters.duration && filters.duration !== 'all') {
-      filtered = filtered.filter(route => route.duration === filters.duration);
-    }
-    
-    // 按评分筛选
-    if (filters.highRating) {
-      filtered = filtered.filter(route => route.rating >= 4.5);
-    }
-    
-    // 获取预览路线（最多3条）
-    const previewRoutes = filtered.slice(0, 3);
-    
+    const filtered = routeFilter.applyFilters(routes, f);
     this.setData({
+      filters: f,
       filteredCount: filtered.length,
-      previewRoutes: previewRoutes
+      previewRoutes: filtered.slice(0, 3)
     });
   },
 
-  resetFilters: function() {
-    const defaultFilters = {
-      type: 'all',
-      duration: 'all',
-      highRating: true,
-      includeFood: true,
-      includeSchedule: true
-    };
-    
-    this.setData({ filters: defaultFilters });
-    this.updatePreview();
+  patchFilter(key, value) {
+    const filters = { ...this.data.filters, [key]: value };
+    this.refreshPreview(filters);
   },
 
-  applyFilters: function() {
-    // 保存筛选条件到全局
+  setType(e) {
+    this.patchFilter('type', e.currentTarget.dataset.type);
+  },
+
+  setDuration(e) {
+    this.patchFilter('duration', e.currentTarget.dataset.duration);
+  },
+
+  setDistrict(e) {
+    this.patchFilter('district', e.currentTarget.dataset.id);
+  },
+
+  setSeason(e) {
+    this.patchFilter('season', e.currentTarget.dataset.id);
+  },
+
+  setFestival(e) {
+    this.patchFilter('festival', e.currentTarget.dataset.id);
+  },
+
+  toggleHighRating(e) {
+    this.patchFilter('highRating', e.detail.value);
+  },
+
+  toggleIncludeFood(e) {
+    this.patchFilter('includeFood', e.detail.value);
+  },
+
+  toggleIncludeSchedule(e) {
+    this.patchFilter('includeSchedule', e.detail.value);
+  },
+
+  resetFilters() {
+    this.refreshPreview(app.getDefaultFilters());
+  },
+
+  applyFilters() {
     app.globalData.filters = { ...this.data.filters };
-    
-    // 返回上一页
-    wx.navigateBack({
-      delta: 1
-    });
-    
-    // 显示应用成功提示
-    wx.showToast({
-      title: '筛选条件已应用',
-      icon: 'success'
-    });
+    nav.toHome();
+    wx.showToast({ title: `已筛选 ${this.data.filteredCount} 条`, icon: 'none', duration: 1200 });
   }
 });

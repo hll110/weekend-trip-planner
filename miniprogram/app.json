@@ -1,18 +1,23 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/route-detail/route-detail",
+    "pages/discover/discover",
     "pages/filter/filter",
-    "pages/location-picker/location-picker"
+    "pages/location-picker/location-picker",
+    "pages/food-guide/food-guide",
+    "pages/culture/culture",
+    "pages/my-routes/my-routes",
+    "pages/my-route-edit/my-route-edit"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#c41e2a",
-    "navigationBarTitleText": "重庆周边游",
+    "navigationBarTitleText": "渝趣周边游",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#fef7f0"
   },
   "tabBar": {
+    "custom": true,
     "color": "#94a3b8",
     "selectedColor": "#c41e2a",
     "backgroundColor": "#ffffff",
@@ -23,6 +28,12 @@
         "text": "首页",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
+        "iconPath": "images/discover.png",
+        "selectedIconPath": "images/discover-active.png"
       },
       {
         "pagePath": "pages/filter/filter",
@@ -42,6 +53,28 @@
     "request": 10000,
     "downloadFile": 10000
   },
+  "subpackages": [
+    {
+      "root": "packageRoutes",
+      "name": "routes",
+      "pages": [
+        "pages/route-detail/route-detail"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": ["routes"]
+    },
+    "pages/discover/discover": {
+      "network": "all",
+      "packages": ["routes"]
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
   "debug": false,
   "navigateToMiniProgramAppIdList": []
 }

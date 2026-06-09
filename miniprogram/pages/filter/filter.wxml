@@ -1,92 +1,83 @@
-<!--pages/filter/filter.wxml-->
-<view class="container">
-  <view class="filter-header">
-    <view class="filter-title">重庆周边游筛选</view>
-    <view class="filter-subtitle">发现最适合您的重庆周边路线</view>
-  </view>
-  
-  <!-- 路线类型 -->
-  <view class="filter-section">
-    <view class="section-title">路线类型</view>
-    <view class="type-options">
-      <view class="type-option {{filters.type === 'all' ? 'active' : ''}}" bindtap="setType" data-type="all">
-        <view class="type-icon">🗺️</view>
-        <view class="type-name">全部类型</view>
-        <view class="type-desc">不限制路线类型</view>
+<view class="filter-page">
+  <scroll-view class="filter-scroll" scroll-y enhanced show-scrollbar="{{false}}">
+    <view class="filter-inner">
+      <view class="filter-header">
+        <view class="filter-title">渝趣周边游 · 筛选</view>
+        <view class="filter-subtitle">已匹配 <text class="count-num">{{filteredCount}}</text> 条路线</view>
       </view>
-      <view class="type-option {{filters.type === 'food' ? 'active' : ''}}" bindtap="setType" data-type="food">
-        <view class="type-icon">🍲</view>
-        <view class="type-name">火锅美食</view>
-        <view class="type-desc">品尝重庆火锅和特色小吃</view>
+
+      <view class="filter-section card">
+        <view class="section-title">路线类型</view>
+        <view class="type-grid">
+          <view class="type-option {{filters.type === 'all' ? 'active' : ''}}" bindtap="setType" data-type="all">
+            <text class="type-icon">🗺️</text><text class="type-name">全部</text>
+          </view>
+          <view class="type-option {{filters.type === 'food' ? 'active' : ''}}" bindtap="setType" data-type="food">
+            <text class="type-icon">🍲</text><text class="type-name">美食</text>
+          </view>
+          <view class="type-option {{filters.type === 'hiking' ? 'active' : ''}}" bindtap="setType" data-type="hiking">
+            <text class="type-icon">⛰️</text><text class="type-name">徒步</text>
+          </view>
+          <view class="type-option {{filters.type === 'scenic' ? 'active' : ''}}" bindtap="setType" data-type="scenic">
+            <text class="type-icon">🏞️</text><text class="type-name">景区</text>
+          </view>
+        </view>
       </view>
-      <view class="type-option {{filters.type === 'hiking' ? 'active' : ''}}" bindtap="setType" data-type="hiking">
-        <view class="type-icon">⛰️</view>
-        <view class="type-name">山城徒步</view>
-        <view class="type-desc">探索重庆山城特色路线</view>
+
+      <view class="filter-section card">
+        <view class="section-title">行程时长</view>
+        <view class="chip-row">
+          <view class="chip {{filters.duration === 'all' ? 'active' : ''}}" bindtap="setDuration" data-duration="all">全部</view>
+          <view class="chip {{filters.duration === '1day' ? 'active' : ''}}" bindtap="setDuration" data-duration="1day">1日游</view>
+          <view class="chip {{filters.duration === '2day' ? 'active' : ''}}" bindtap="setDuration" data-duration="2day">2日游</view>
+        </view>
       </view>
-      <view class="type-option {{filters.type === 'scenic' ? 'active' : ''}}" bindtap="setType" data-type="scenic">
-        <view class="type-icon">🏞️</view>
-        <view class="type-name">景区观光</view>
-        <view class="type-desc">游览重庆及周边著名景点</view>
+
+      <view class="filter-section card">
+        <view class="section-title">所在区县</view>
+        <scroll-view class="district-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+          <view class="chip inline {{filters.district === item.id ? 'active' : ''}}" wx:for="{{districts}}" wx:key="id"
+            bindtap="setDistrict" data-id="{{item.id}}">{{item.name}}</view>
+        </scroll-view>
       </view>
-    </view>
-  </view>
-  
-  <!-- 行程时长 -->
-  <view class="filter-section">
-    <view class="section-title">行程时长</view>
-    <view class="duration-options">
-      <view class="duration-option {{filters.duration === 'all' ? 'active' : ''}}" bindtap="setDuration" data-duration="all">
-        <view class="duration-icon">⏰</view>
-        <view class="duration-name">全部时长</view>
+
+      <view class="filter-section card">
+        <view class="section-title">季节特色</view>
+        <view class="chip-row">
+          <view class="chip {{filters.season === item.id ? 'active' : ''}}" wx:for="{{seasons}}" wx:key="id"
+            bindtap="setSeason" data-id="{{item.id}}">{{item.icon}} {{item.name}}</view>
+        </view>
       </view>
-      <view class="duration-option {{filters.duration === '1day' ? 'active' : ''}}" bindtap="setDuration" data-duration="1day">
-        <view class="duration-icon">📅</view>
-        <view class="duration-name">1日游</view>
-        <view class="duration-desc">重庆市区一日游</view>
+
+      <view class="filter-section card">
+        <view class="section-title">节日活动</view>
+        <view class="chip-row wrap">
+          <view class="chip {{filters.festival === 'all' ? 'active' : ''}}" bindtap="setFestival" data-id="all">不限</view>
+          <view class="chip {{filters.festival === item.id ? 'active' : ''}}" wx:for="{{festivals}}" wx:key="id"
+            bindtap="setFestival" data-id="{{item.id}}">{{item.name}}</view>
+        </view>
       </view>
-      <view class="duration-option {{filters.duration === '2day' ? 'active' : ''}}" bindtap="setDuration" data-duration="2day">
-        <view class="duration-icon">📆</view>
-        <view class="duration-name">2日游</view>
-        <view class="duration-desc">重庆周边两日深度游</view>
+
+      <view class="filter-section card">
+        <view class="section-title">其他条件</view>
+        <view class="switch-row">
+          <text>仅显示评分 ≥ 4.5</text>
+          <switch checked="{{filters.highRating}}" bindchange="toggleHighRating" color="#c41e2a"/>
+        </view>
       </view>
-    </view>
-  </view>
-  
-  <!-- 其他筛选条件 -->
-  <view class="filter-section">
-    <view class="section-title">其他条件</view>
-    <view class="other-options">
-      <view class="other-option">
-        <view class="option-label">优先显示评价高的路线</view>
-        <switch checked="{{filters.highRating}}" bindchange="toggleHighRating" color="#c41e2a"/>
-      </view>
-      <view class="other-option">
-        <view class="option-label">包含特色美食推荐</view>
-        <switch checked="{{filters.includeFood}}" bindchange="toggleIncludeFood" color="#c41e2a"/>
-      </view>
-      <view class="other-option">
-        <view class="option-label">包含详细行程安排</view>
-        <switch checked="{{filters.includeSchedule}}" bindchange="toggleIncludeSchedule" color="#c41e2a"/>
-      </view>
-    </view>
-  </view>
-  
-  <!-- 筛选结果预览 -->
-  <view class="filter-preview">
-    <view class="preview-title">筛选结果预览</view>
-    <view class="preview-count">预计找到 {{filteredCount}} 条路线</view>
-    <view class="preview-routes" wx:if="{{previewRoutes.length > 0}}">
-      <view class="preview-route" wx:for="{{previewRoutes}}" wx:key="id">
-        <view class="preview-route-name">{{item.name}}</view>
-        <view class="preview-route-type">{{item.type === 'food' ? '美食' : item.type === 'hiking' ? '徒步' : '景区'}}</view>
+
+      <view class="filter-preview card" wx:if="{{previewRoutes.length > 0}}">
+        <view class="section-title">预览</view>
+        <view class="preview-route" wx:for="{{previewRoutes}}" wx:key="id">
+          <text class="preview-name">{{item.name}}</text>
+          <text class="preview-type">{{item.type === 'food' ? '美食' : item.type === 'hiking' ? '徒步' : '景区'}}</text>
+        </view>
       </view>
     </view>
-  </view>
-  
-  <!-- 操作按钮 -->
-  <view class="filter-actions">
-    <button class="btn btn-outline" bindtap="resetFilters">重置筛选</button>
-    <button class="btn btn-primary" bindtap="applyFilters">应用筛选</button>
+  </scroll-view>
+
+  <view class="filter-footer">
+    <button class="btn btn-outline" bindtap="resetFilters">重置</button>
+    <button class="btn btn-primary" bindtap="applyFilters">查看 {{filteredCount}} 条路线</button>
   </view>
 </view>

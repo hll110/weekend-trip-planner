@@ -1,4 +1,4 @@
-/** 微信地图导航 */
+/** 微信地图导航（分包内使用） */
 
 function openSpot(spot, fallback) {
   const lat = spot.lat || (fallback && fallback.lat);

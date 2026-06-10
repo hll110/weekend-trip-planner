@@ -6,6 +6,10 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const { execFileSync } = require('child_process');
+const Jimp = require('jimp');
+
+const MAX_WIDTH = 480;
+const JPEG_QUALITY = 55;
 
 const dataDir = path.join(__dirname, '../miniprogram/data');
 const outDir = path.join(__dirname, '../miniprogram/packageRoutes/images/routes');
@@ -97,14 +101,22 @@ async function downloadToFile(url, dest) {
   throw lastErr;
 }
 
+async function compressImage(filePath) {
+  const img = await Jimp.read(filePath);
+  if (img.bitmap.width > MAX_WIDTH) {
+    img.resize(MAX_WIDTH, Jimp.AUTO);
+  }
+  await img.quality(JPEG_QUALITY).writeAsync(filePath);
+}
+
 async function main() {
   fs.mkdirSync(outDir, { recursive: true });
   const routes = JSON.parse(fs.readFileSync(routesJsonPath, 'utf8'));
   const placeholder = path.join(__dirname, '../miniprogram/images/placeholder.png');
 
   for (const route of routes) {
-    const urls = urlsByRoute[route.id];
-    if (!urls || !urls.length) {
+    const urls = (urlsByRoute[route.id] || []).slice(0, 1);
+    if (!urls.length) {
       console.warn(`跳过路线 ${route.id}：无配图配置`);
       continue;
     }
@@ -114,20 +126,20 @@ async function main() {
 
     for (let i = 0; i < urls.length; i++) {
       const src = urls[i];
-      const ext = extFromUrl(src);
-      const localName = `${route.id}-${i + 1}${ext}`;
+      const localName = `${route.id}-1.jpg`;
       const localPath = path.join(outDir, localName);
       const miniPath = `/packageRoutes/images/routes/${localName}`;
 
       try {
         await downloadToFile(src, localPath);
+        await compressImage(localPath);
         const kb = (fs.statSync(localPath).size / 1024).toFixed(0);
         localImages.push(miniPath);
         console.log(`  OK ${localName} (${kb} KB)`);
       } catch (e) {
         console.warn(`  失败: ${e.message}`);
         if (fs.existsSync(placeholder)) {
-          const fallbackName = `${route.id}-${i + 1}.png`;
+          const fallbackName = `${route.id}-1.png`;
           fs.copyFileSync(placeholder, path.join(outDir, fallbackName));
           localImages.push(`/packageRoutes/images/routes/${fallbackName}`);
           console.log(`  使用占位图 ${fallbackName}`);

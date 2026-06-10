@@ -76,10 +76,7 @@ module.exports = [
       "lng": 106.551
     },
     "images": [
-      "/packageRoutes/images/routes/1-1.jpg",
-      "/packageRoutes/images/routes/1-2.jpg",
-      "/packageRoutes/images/routes/1-3.jpg",
-      "/packageRoutes/images/routes/1-4.jpg"
+      "/packageRoutes/images/routes/1-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/1-1.jpg"
   },
@@ -142,9 +139,7 @@ module.exports = [
       "lng": 106.448
     },
     "images": [
-      "/packageRoutes/images/routes/2-1.jpg",
-      "/packageRoutes/images/routes/2-2.jpg",
-      "/packageRoutes/images/routes/2-3.jpg"
+      "/packageRoutes/images/routes/2-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/2-1.jpg"
   },
@@ -214,9 +209,7 @@ module.exports = [
       "lng": 106.532
     },
     "images": [
-      "/packageRoutes/images/routes/3-1.jpg",
-      "/packageRoutes/images/routes/3-2.jpg",
-      "/packageRoutes/images/routes/3-3.jpg"
+      "/packageRoutes/images/routes/3-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/3-1.jpg"
   },
@@ -271,9 +264,7 @@ module.exports = [
       "lng": 107.76
     },
     "images": [
-      "/packageRoutes/images/routes/4-1.jpg",
-      "/packageRoutes/images/routes/4-2.jpg",
-      "/packageRoutes/images/routes/4-3.jpg"
+      "/packageRoutes/images/routes/4-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/4-1.jpg"
   },
@@ -330,9 +321,7 @@ module.exports = [
       "lng": 106.607
     },
     "images": [
-      "/packageRoutes/images/routes/5-1.jpg",
-      "/packageRoutes/images/routes/5-2.jpg",
-      "/packageRoutes/images/routes/5-3.jpg"
+      "/packageRoutes/images/routes/5-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/5-1.jpg"
   },
@@ -386,8 +375,7 @@ module.exports = [
       "lng": 105.78
     },
     "images": [
-      "/packageRoutes/images/routes/6-1.jpg",
-      "/packageRoutes/images/routes/6-2.jpg"
+      "/packageRoutes/images/routes/6-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/6-1.jpg"
   },
@@ -442,9 +430,7 @@ module.exports = [
       "lng": 108.767
     },
     "images": [
-      "/packageRoutes/images/routes/7-1.jpg",
-      "/packageRoutes/images/routes/7-2.jpg",
-      "/packageRoutes/images/routes/7-3.jpg"
+      "/packageRoutes/images/routes/7-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/7-1.jpg"
   },
@@ -499,9 +485,7 @@ module.exports = [
       "lng": 109.552
     },
     "images": [
-      "/packageRoutes/images/routes/8-1.jpg",
-      "/packageRoutes/images/routes/8-2.jpg",
-      "/packageRoutes/images/routes/8-3.jpg"
+      "/packageRoutes/images/routes/8-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/8-1.jpg"
   },
@@ -557,9 +541,7 @@ module.exports = [
       "lng": 107.109
     },
     "images": [
-      "/packageRoutes/images/routes/9-1.jpg",
-      "/packageRoutes/images/routes/9-2.jpg",
-      "/packageRoutes/images/routes/9-3.jpg"
+      "/packageRoutes/images/routes/9-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/9-1.jpg"
   },
@@ -622,8 +604,7 @@ module.exports = [
       "lng": 108.408
     },
     "images": [
-      "/packageRoutes/images/routes/10-1.jpg",
-      "/packageRoutes/images/routes/10-2.jpg"
+      "/packageRoutes/images/routes/10-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/10-1.jpg"
   },
@@ -677,8 +658,7 @@ module.exports = [
       "lng": 107.731
     },
     "images": [
-      "/packageRoutes/images/routes/11-1.jpg",
-      "/packageRoutes/images/routes/11-2.jpg"
+      "/packageRoutes/images/routes/11-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/11-1.jpg"
   },
@@ -732,9 +712,7 @@ module.exports = [
       "lng": 106.433
     },
     "images": [
-      "/packageRoutes/images/routes/12-1.jpg",
-      "/packageRoutes/images/routes/12-2.jpg",
-      "/packageRoutes/images/routes/12-3.jpg"
+      "/packageRoutes/images/routes/12-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/12-1.jpg"
   },
@@ -828,9 +806,7 @@ module.exports = [
       "lng": 106.6012
     },
     "images": [
-      "/packageRoutes/images/routes/13-1.jpg",
-      "/packageRoutes/images/routes/13-2.jpg",
-      "/packageRoutes/images/routes/13-3.jpg"
+      "/packageRoutes/images/routes/13-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/13-1.jpg"
   },
@@ -909,9 +885,7 @@ module.exports = [
       "lng": 106.6358
     },
     "images": [
-      "/packageRoutes/images/routes/14-1.jpg",
-      "/packageRoutes/images/routes/14-2.jpg",
-      "/packageRoutes/images/routes/14-3.jpg"
+      "/packageRoutes/images/routes/14-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/14-1.jpg"
   },
@@ -1009,9 +983,7 @@ module.exports = [
       "lng": 106.4512
     },
     "images": [
-      "/packageRoutes/images/routes/15-1.jpg",
-      "/packageRoutes/images/routes/15-2.jpg",
-      "/packageRoutes/images/routes/15-3.jpg"
+      "/packageRoutes/images/routes/15-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/15-1.jpg"
   },
@@ -1111,9 +1083,7 @@ module.exports = [
       "lng": 106.5234
     },
     "images": [
-      "/packageRoutes/images/routes/16-1.jpg",
-      "/packageRoutes/images/routes/16-2.jpg",
-      "/packageRoutes/images/routes/16-3.jpg"
+      "/packageRoutes/images/routes/16-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/16-1.jpg"
   },
@@ -1212,9 +1182,7 @@ module.exports = [
       "lng": 107.1234
     },
     "images": [
-      "/packageRoutes/images/routes/17-1.jpg",
-      "/packageRoutes/images/routes/17-2.jpg",
-      "/packageRoutes/images/routes/17-3.jpg"
+      "/packageRoutes/images/routes/17-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/17-1.jpg"
   },
@@ -1313,9 +1281,7 @@ module.exports = [
       "lng": 107.7234
     },
     "images": [
-      "/packageRoutes/images/routes/18-1.jpg",
-      "/packageRoutes/images/routes/18-2.jpg",
-      "/packageRoutes/images/routes/18-3.jpg"
+      "/packageRoutes/images/routes/18-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/18-1.jpg"
   },
@@ -1419,9 +1385,7 @@ module.exports = [
       "lng": 106.5856
     },
     "images": [
-      "/packageRoutes/images/routes/19-1.jpg",
-      "/packageRoutes/images/routes/19-2.jpg",
-      "/packageRoutes/images/routes/19-3.jpg"
+      "/packageRoutes/images/routes/19-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/19-1.jpg"
   },
@@ -1521,9 +1485,7 @@ module.exports = [
       "lng": 106.3234
     },
     "images": [
-      "/packageRoutes/images/routes/20-1.jpg",
-      "/packageRoutes/images/routes/20-2.jpg",
-      "/packageRoutes/images/routes/20-3.jpg"
+      "/packageRoutes/images/routes/20-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/20-1.jpg"
   },
@@ -1615,9 +1577,7 @@ module.exports = [
       "lng": 108.7234
     },
     "images": [
-      "/packageRoutes/images/routes/21-1.jpg",
-      "/packageRoutes/images/routes/21-2.jpg",
-      "/packageRoutes/images/routes/21-3.jpg"
+      "/packageRoutes/images/routes/21-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/21-1.jpg"
   },
@@ -1719,9 +1679,7 @@ module.exports = [
       "lng": 106.3234
     },
     "images": [
-      "/packageRoutes/images/routes/22-1.jpg",
-      "/packageRoutes/images/routes/22-2.jpg",
-      "/packageRoutes/images/routes/22-3.jpg"
+      "/packageRoutes/images/routes/22-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/22-1.jpg"
   },
@@ -1822,9 +1780,7 @@ module.exports = [
       "lng": 108.3234
     },
     "images": [
-      "/packageRoutes/images/routes/23-1.jpg",
-      "/packageRoutes/images/routes/23-2.jpg",
-      "/packageRoutes/images/routes/23-3.jpg"
+      "/packageRoutes/images/routes/23-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/23-1.jpg"
   },
@@ -1916,9 +1872,7 @@ module.exports = [
       "lng": 107.3234
     },
     "images": [
-      "/packageRoutes/images/routes/24-1.jpg",
-      "/packageRoutes/images/routes/24-2.jpg",
-      "/packageRoutes/images/routes/24-3.jpg"
+      "/packageRoutes/images/routes/24-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/24-1.jpg"
   },
@@ -2008,9 +1962,7 @@ module.exports = [
       "lng": 106.2234
     },
     "images": [
-      "/packageRoutes/images/routes/25-1.jpg",
-      "/packageRoutes/images/routes/25-2.jpg",
-      "/packageRoutes/images/routes/25-3.jpg"
+      "/packageRoutes/images/routes/25-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/25-1.jpg"
   },
@@ -2103,9 +2055,7 @@ module.exports = [
       "lng": 108.7234
     },
     "images": [
-      "/packageRoutes/images/routes/26-1.jpg",
-      "/packageRoutes/images/routes/26-2.jpg",
-      "/packageRoutes/images/routes/26-3.jpg"
+      "/packageRoutes/images/routes/26-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/26-1.jpg"
   },
@@ -2199,9 +2149,7 @@ module.exports = [
       "lng": 107.8234
     },
     "images": [
-      "/packageRoutes/images/routes/27-1.jpg",
-      "/packageRoutes/images/routes/27-2.jpg",
-      "/packageRoutes/images/routes/27-3.jpg"
+      "/packageRoutes/images/routes/27-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/27-1.jpg"
   },
@@ -2297,9 +2245,7 @@ module.exports = [
       "lng": 106.4234
     },
     "images": [
-      "/packageRoutes/images/routes/28-1.jpg",
-      "/packageRoutes/images/routes/28-2.jpg",
-      "/packageRoutes/images/routes/28-3.jpg"
+      "/packageRoutes/images/routes/28-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/28-1.jpg"
   },
@@ -2400,9 +2346,7 @@ module.exports = [
       "lng": 106.6012
     },
     "images": [
-      "/packageRoutes/images/routes/29-1.jpg",
-      "/packageRoutes/images/routes/29-2.jpg",
-      "/packageRoutes/images/routes/29-3.jpg"
+      "/packageRoutes/images/routes/29-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/29-1.jpg"
   },
@@ -2504,9 +2448,7 @@ module.exports = [
       "lng": 106.4234
     },
     "images": [
-      "/packageRoutes/images/routes/30-1.jpg",
-      "/packageRoutes/images/routes/30-2.jpg",
-      "/packageRoutes/images/routes/30-3.jpg"
+      "/packageRoutes/images/routes/30-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/30-1.jpg"
   },
@@ -2605,9 +2547,7 @@ module.exports = [
       "lng": 106.3234
     },
     "images": [
-      "/packageRoutes/images/routes/31-1.jpg",
-      "/packageRoutes/images/routes/31-2.jpg",
-      "/packageRoutes/images/routes/31-3.jpg"
+      "/packageRoutes/images/routes/31-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/31-1.jpg"
   },
@@ -2699,9 +2639,7 @@ module.exports = [
       "lng": 106.6358
     },
     "images": [
-      "/packageRoutes/images/routes/32-1.jpg",
-      "/packageRoutes/images/routes/32-2.jpg",
-      "/packageRoutes/images/routes/32-3.jpg"
+      "/packageRoutes/images/routes/32-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/32-1.jpg"
   },
@@ -2796,9 +2734,7 @@ module.exports = [
       "lng": 106.5234
     },
     "images": [
-      "/packageRoutes/images/routes/33-1.jpg",
-      "/packageRoutes/images/routes/33-2.jpg",
-      "/packageRoutes/images/routes/33-3.jpg"
+      "/packageRoutes/images/routes/33-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/33-1.jpg"
   },
@@ -2898,9 +2834,7 @@ module.exports = [
       "lng": 106.7234
     },
     "images": [
-      "/packageRoutes/images/routes/34-1.jpg",
-      "/packageRoutes/images/routes/34-2.jpg",
-      "/packageRoutes/images/routes/34-3.jpg"
+      "/packageRoutes/images/routes/34-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/34-1.jpg"
   },
@@ -2994,9 +2928,7 @@ module.exports = [
       "lng": 106.3234
     },
     "images": [
-      "/packageRoutes/images/routes/35-1.jpg",
-      "/packageRoutes/images/routes/35-2.jpg",
-      "/packageRoutes/images/routes/35-3.jpg"
+      "/packageRoutes/images/routes/35-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/35-1.jpg"
   },
@@ -3076,9 +3008,7 @@ module.exports = [
       "lng": 106.6234
     },
     "images": [
-      "/packageRoutes/images/routes/36-1.jpg",
-      "/packageRoutes/images/routes/36-2.jpg",
-      "/packageRoutes/images/routes/36-3.jpg"
+      "/packageRoutes/images/routes/36-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/36-1.jpg"
   },
@@ -3177,9 +3107,7 @@ module.exports = [
       "lng": 106.8234
     },
     "images": [
-      "/packageRoutes/images/routes/37-1.jpg",
-      "/packageRoutes/images/routes/37-2.jpg",
-      "/packageRoutes/images/routes/37-3.jpg"
+      "/packageRoutes/images/routes/37-1.jpg"
     ],
     "image": "/packageRoutes/images/routes/37-1.jpg"
   }

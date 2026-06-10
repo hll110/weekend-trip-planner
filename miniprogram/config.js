@@ -5,7 +5,7 @@
  * 联调后端：改为 enableRemoteApi = true，并启动 server；
  *   同时在微信开发者工具勾选「不校验合法域名」
  *
- * 路线图片存放在 miniprogram/packageRoutes/images/routes/（分包，无需配置图片域名）
+ * 路线图片存放在 miniprogram/packageRoutes/images/routes/（分包封面图，每条 1 张）
  */
 module.exports = {
   /** 是否请求远程 API（false = 仅用本地数据，避免域名校验报错） */

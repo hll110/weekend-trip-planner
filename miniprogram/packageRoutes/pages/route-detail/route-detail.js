@@ -1,5 +1,5 @@
 const app = getApp();
-const navigation = require('../../../utils/navigation.js');
+const navigation = require('../../utils/navigation.js');
 const { districts } = require('../../../data/extensions.js');
 
 const districtMap = {};

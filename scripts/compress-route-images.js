@@ -7,8 +7,8 @@ const path = require('path');
 const Jimp = require('jimp');
 
 const routesDir = path.join(__dirname, '../miniprogram/packageRoutes/images/routes');
-const MAX_WIDTH = 750;
-const JPEG_QUALITY = 72;
+const MAX_WIDTH = 480;
+const JPEG_QUALITY = 55;
 
 async function main() {
   if (!fs.existsSync(routesDir)) {

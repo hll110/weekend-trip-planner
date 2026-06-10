@@ -60,11 +60,7 @@
   ],
   "preloadRule": {
     "pages/index/index": {
-      "network": "all",
-      "packages": ["routes"]
-    },
-    "pages/discover/discover": {
-      "network": "all",
+      "network": "wifi",
       "packages": ["routes"]
     }
   },

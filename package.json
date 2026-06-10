@@ -7,6 +7,7 @@
     "dev": "echo \"请使用微信开发者工具打开项目\"",
     "build": "echo \"请使用微信开发者工具上传代码\"",
     "compress-images": "node scripts/compress-route-images.js",
+    "shrink-images": "node scripts/shrink-route-images.js",
     "server": "cd server && python3 app.py",
     "start": "npm run server"
   },

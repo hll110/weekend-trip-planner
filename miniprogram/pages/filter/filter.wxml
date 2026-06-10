@@ -2,7 +2,7 @@
   <scroll-view class="filter-scroll" scroll-y enhanced show-scrollbar="{{false}}">
     <view class="filter-inner">
       <view class="filter-header">
-        <view class="filter-title">渝趣周边游 · 筛选</view>
+        <view class="filter-title">路线筛选</view>
         <view class="filter-subtitle">已匹配 <text class="count-num">{{filteredCount}}</text> 条路线</view>
       </view>
 
@@ -12,14 +12,14 @@
           <view class="type-option {{filters.type === 'all' ? 'active' : ''}}" bindtap="setType" data-type="all">
             <text class="type-icon">🗺️</text><text class="type-name">全部</text>
           </view>
-          <view class="type-option {{filters.type === 'food' ? 'active' : ''}}" bindtap="setType" data-type="food">
-            <text class="type-icon">🍲</text><text class="type-name">美食</text>
-          </view>
           <view class="type-option {{filters.type === 'hiking' ? 'active' : ''}}" bindtap="setType" data-type="hiking">
             <text class="type-icon">⛰️</text><text class="type-name">徒步</text>
           </view>
           <view class="type-option {{filters.type === 'scenic' ? 'active' : ''}}" bindtap="setType" data-type="scenic">
             <text class="type-icon">🏞️</text><text class="type-name">景区</text>
+          </view>
+          <view class="type-option {{filters.type === 'food' ? 'active' : ''}}" bindtap="setType" data-type="food">
+            <text class="type-icon">🍲</text><text class="type-name">美食</text>
           </view>
         </view>
       </view>
@@ -42,7 +42,7 @@
       </view>
 
       <view class="filter-section card">
-        <view class="section-title">季节特色</view>
+        <view class="section-title">出行季节</view>
         <view class="chip-row">
           <view class="chip {{filters.season === item.id ? 'active' : ''}}" wx:for="{{seasons}}" wx:key="id"
             bindtap="setSeason" data-id="{{item.id}}">{{item.icon}} {{item.name}}</view>
@@ -50,19 +50,10 @@
       </view>
 
       <view class="filter-section card">
-        <view class="section-title">节日活动</view>
-        <view class="chip-row wrap">
-          <view class="chip {{filters.festival === 'all' ? 'active' : ''}}" bindtap="setFestival" data-id="all">不限</view>
-          <view class="chip {{filters.festival === item.id ? 'active' : ''}}" wx:for="{{festivals}}" wx:key="id"
-            bindtap="setFestival" data-id="{{item.id}}">{{item.name}}</view>
-        </view>
-      </view>
-
-      <view class="filter-section card">
         <view class="section-title">其他条件</view>
         <view class="switch-row">
           <text>仅显示评分 ≥ 4.5</text>
-          <switch checked="{{filters.highRating}}" bindchange="toggleHighRating" color="#c41e2a"/>
+          <switch checked="{{filters.highRating}}" bindchange="toggleHighRating" color="#2d6a4f"/>
         </view>
       </view>
 

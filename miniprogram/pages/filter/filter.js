@@ -2,14 +2,13 @@ const app = getApp();
 const routeFilter = require('../../utils/route-filter.js');
 const nav = require('../../utils/nav.js');
 const tabBar = require('../../utils/tab-bar.js');
-const { districts, seasons, festivals } = require('../../data/extensions.js');
+const { districts, seasons } = require('../../data/extensions.js');
 
 Page({
   data: {
     filters: {},
     districts,
     seasons,
-    festivals,
     filteredCount: 0,
     previewRoutes: []
   },
@@ -55,20 +54,8 @@ Page({
     this.patchFilter('season', e.currentTarget.dataset.id);
   },
 
-  setFestival(e) {
-    this.patchFilter('festival', e.currentTarget.dataset.id);
-  },
-
   toggleHighRating(e) {
     this.patchFilter('highRating', e.detail.value);
-  },
-
-  toggleIncludeFood(e) {
-    this.patchFilter('includeFood', e.detail.value);
-  },
-
-  toggleIncludeSchedule(e) {
-    this.patchFilter('includeSchedule', e.detail.value);
   },
 
   resetFilters() {

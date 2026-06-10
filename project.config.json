@@ -3,11 +3,26 @@
   "miniprogramRoot": "miniprogram/",
   "packOptions": {
     "ignore": [
-      { "type": "folder", "value": "server" },
-      { "type": "file", "value": ".gitignore" },
-      { "type": "file", "value": "README.md" },
-      { "type": "file", "value": "start.sh" },
-      { "type": "file", "value": "路线清单.md" }
+      {
+        "value": "server",
+        "type": "folder"
+      },
+      {
+        "value": ".gitignore",
+        "type": "file"
+      },
+      {
+        "value": "README.md",
+        "type": "file"
+      },
+      {
+        "value": "start.sh",
+        "type": "file"
+      },
+      {
+        "value": "路线清单.md",
+        "type": "file"
+      }
     ],
     "include": []
   },

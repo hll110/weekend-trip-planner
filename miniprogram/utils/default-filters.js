@@ -4,8 +4,5 @@ module.exports = {
   duration: 'all',
   district: 'all',
   season: 'all',
-  festival: 'all',
-  highRating: false,
-  includeFood: true,
-  includeSchedule: true
+  highRating: false
 };

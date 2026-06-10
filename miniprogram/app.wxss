@@ -1,6 +1,6 @@
 /* 全局样式 - 渝趣周边游主题设计 */
 page {
-  background-color: #fef7f0;
+  background-color: #f0f7f4;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   font-size: 28rpx;
   color: #1e293b;
@@ -15,13 +15,13 @@ page {
   box-sizing: border-box;
 }
 
-/* 重庆主题色调 - 红色系 */
+/* 主题色调 - 山野绿 */
 .primary-color {
-  color: #c41e2a;
+  color: #2d6a4f;
 }
 
 .primary-bg {
-  background: linear-gradient(135deg, #c41e2a 0%, #e53e3e 100%);
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
 }
 
 /* 次要色调 - 火锅橙 */
@@ -75,8 +75,8 @@ page {
   border-radius: 20rpx;
   padding: 28rpx;
   margin-bottom: 20rpx;
-  box-shadow: 0 2rpx 12rpx rgba(196, 30, 42, 0.08);
-  border: 1rpx solid rgba(196, 30, 42, 0.05);
+  box-shadow: 0 2rpx 12rpx rgba(27, 67, 50, 0.08);
+  border: 1rpx solid rgba(45, 106, 79, 0.06);
 }
 
 .section-title {
@@ -123,7 +123,7 @@ page {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #c41e2a 0%, #e53e3e 100%);
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
   color: white;
 }
 
@@ -144,12 +144,12 @@ page {
 
 .btn-outline {
   background: transparent;
-  border: 2rpx solid #c41e2a;
-  color: #c41e2a;
+  border: 2rpx solid #2d6a4f;
+  color: #2d6a4f;
 }
 
 .btn-outline:active {
-  background: #c41e2a;
+  background: #2d6a4f;
   color: white;
 }
 
@@ -166,8 +166,8 @@ page {
 }
 
 .tag-primary {
-  background: #fef2f2;
-  color: #c41e2a;
+  background: #f0f7f4;
+  color: #2d6a4f;
 }
 
 .tag-secondary {
@@ -190,14 +190,14 @@ page {
   background: white;
   border-radius: 16rpx;
   overflow: hidden;
-  box-shadow: 0 2rpx 10rpx rgba(196, 30, 42, 0.05);
+  box-shadow: 0 2rpx 10rpx rgba(27, 67, 50, 0.05);
 }
 
 .list-item {
   display: flex;
   align-items: center;
   padding: 28rpx 32rpx;
-  border-bottom: 1rpx solid #fef2f2;
+  border-bottom: 1rpx solid #f0f7f4;
   transition: background 0.3s ease;
 }
 
@@ -206,7 +206,7 @@ page {
 }
 
 .list-item:active {
-  background: #fef7f0;
+  background: #f0f7f4;
 }
 
 .list-icon {
@@ -258,7 +258,7 @@ page {
   width: 100%;
   height: 88rpx;
   padding: 0 24rpx;
-  border: 2rpx solid #fef2f2;
+  border: 2rpx solid #f0f7f4;
   border-radius: 16rpx;
   font-size: 28rpx;
   color: #1e293b;
@@ -267,7 +267,7 @@ page {
 }
 
 .form-input:focus {
-  border-color: #c41e2a;
+  border-color: #2d6a4f;
   outline: none;
 }
 
@@ -300,7 +300,7 @@ page {
 /* 进度条设计 */
 .progress {
   height: 12rpx;
-  background: #fef2f2;
+  background: #f0f7f4;
   border-radius: 6rpx;
   overflow: hidden;
 }
@@ -325,7 +325,7 @@ page {
   width: 60rpx;
   height: 60rpx;
   border: 4rpx solid #fef2f2;
-  border-top: 4rpx solid #c41e2a;
+  border-top: 4rpx solid #2d6a4f;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 20rpx;

@@ -9,11 +9,9 @@ Page({
   data: {
     location: { name: '正在获取位置...', address: '' },
     weather: null,
-    dialect: null,
     routes: [],
     filteredRoutes: [],
     activeFilterLabels: [],
-    districtOptions: districts.filter((d) => d.id !== 'all').slice(0, 12),
     filters: app.getDefaultFilters(),
     isLoading: true
   },
@@ -29,7 +27,6 @@ Page({
     this.syncPageState();
   },
 
-  /** 单次 setData：同步筛选结果，避免 setData 异步导致筛选失效 */
   syncPageState() {
     const filters = { ...app.globalData.filters };
     const routes = app.globalData.routes || [];
@@ -46,7 +43,7 @@ Page({
 
   buildFilterLabels(filters) {
     const labels = [];
-    const typeMap = { food: '火锅美食', hiking: '山城徒步', scenic: '景区观光' };
+    const typeMap = { food: '美食路线', hiking: '徒步爬山', scenic: '景区游玩' };
     const seasonMap = { spring: '春季', summer: '夏季', autumn: '秋季', winter: '冬季' };
     if (filters.type && filters.type !== 'all') labels.push(typeMap[filters.type] || filters.type);
     if (filters.duration && filters.duration !== 'all') {
@@ -57,8 +54,7 @@ Page({
       if (d) labels.push(d.name);
     }
     if (filters.season && filters.season !== 'all') labels.push(seasonMap[filters.season]);
-    if (filters.festival && filters.festival !== 'all') labels.push('节日');
-    if (filters.highRating) labels.push('高分');
+    if (filters.highRating) labels.push('高分路线');
     return labels;
   },
 
@@ -89,10 +85,7 @@ Page({
   },
 
   loadWeather() {
-    this.setData({
-      weather: weatherUtil.getChongqingWeather(),
-      dialect: app.getRandomDialect()
-    });
+    this.setData({ weather: weatherUtil.getChongqingWeather() });
   },
 
   applyFilter(key, value) {
@@ -103,18 +96,6 @@ Page({
 
   setTypeFilter(e) {
     this.applyFilter('type', e.currentTarget.dataset.type);
-  },
-
-  setDurationFilter(e) {
-    this.applyFilter('duration', e.currentTarget.dataset.duration);
-  },
-
-  setDistrictFilter(e) {
-    this.applyFilter('district', e.currentTarget.dataset.district);
-  },
-
-  setSeasonFilter(e) {
-    this.applyFilter('season', e.currentTarget.dataset.season);
   },
 
   resetFilters() {
@@ -134,10 +115,6 @@ Page({
     nav.toFilter();
   },
 
-  goDiscover() {
-    nav.toDiscover();
-  },
-
   onPullDownRefresh() {
     app.reloadAllRoutes();
     this.loadWeather();
@@ -147,7 +124,7 @@ Page({
 
   onShareAppMessage() {
     return {
-      title: '渝趣周边游 - 周末出行推荐',
+      title: '渝趣周边游 - 重庆小众徒步路线',
       path: '/pages/index/index',
       imageUrl: '/images/share-bg.png'
     };

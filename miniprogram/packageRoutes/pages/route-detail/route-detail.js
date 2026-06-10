@@ -1,62 +1,50 @@
-// pages/route-detail/route-detail.js
 const app = getApp();
 const navigation = require('../../../utils/navigation.js');
 const { districts } = require('../../../data/extensions.js');
 
 const districtMap = {};
-districts.forEach(d => { districtMap[d.id] = d.name; });
+districts.forEach((d) => { districtMap[d.id] = d.name; });
 
 Page({
   data: {
     route: null,
     routeId: null,
-    culture: null,
-    dialect: null,
     districtName: '',
     galleryIndex: 0
   },
 
-  onLoad: function(options) {
+  onLoad(options) {
     const routeId = parseInt(options.id);
     this.setData({ routeId });
     this.loadRouteDetail(routeId);
   },
 
-  loadRouteDetail: function(routeId) {
+  loadRouteDetail(routeId) {
     const that = this;
-    
-    // 确保路线数据已加载
+
     if (app.globalData.routes && app.globalData.routes.length > 0) {
       this.processRouteDetail(routeId);
     } else {
-      // 等待数据加载
       wx.showLoading({ title: '加载中...' });
-      
-      // 设置数据加载回调
-      app.routesLoadedCallback = (routes) => {
+
+      app.routesLoadedCallback = () => {
         that.processRouteDetail(routeId);
         wx.hideLoading();
       };
-      
-      // 超时处理
+
       setTimeout(() => {
         wx.hideLoading();
         if (app.globalData.routes && app.globalData.routes.length > 0) {
           that.processRouteDetail(routeId);
         } else {
-          wx.showToast({
-            title: '加载失败',
-            icon: 'none'
-          });
-          setTimeout(() => {
-            wx.navigateBack();
-          }, 1500);
+          wx.showToast({ title: '加载失败', icon: 'none' });
+          setTimeout(() => wx.navigateBack(), 1500);
         }
       }, 2000);
     }
   },
 
-  processRouteDetail: function(routeId) {
+  processRouteDetail(routeId) {
     const that = this;
     const route = app.getRouteById(routeId);
 
@@ -73,13 +61,9 @@ Page({
       });
   },
 
-  setRouteData: function(route) {
-    const culture = route.cultureId ? app.getCultureById(route.cultureId) : null;
-    const dialect = app.getRandomDialect();
+  setRouteData(route) {
     this.setData({
       route,
-      culture,
-      dialect,
       districtName: route.districtName || districtMap[route.district] || '',
       galleryIndex: 0
     });
@@ -114,47 +98,34 @@ Page({
     navigation.showSpotPicker(route);
   },
 
-  goCulture() {
-    if (!this.data.culture) return;
-    wx.navigateTo({ url: '/pages/culture/culture' });
-  },
-
-  shareRoute: function() {
+  shareRoute() {
     const route = this.data.route;
     if (!route) return;
-    
     wx.showShareMenu({
       withShareTicket: true,
       menus: ['shareAppMessage', 'shareTimeline']
     });
   },
 
-  onShareAppMessage: function() {
+  onShareAppMessage() {
     const route = this.data.route;
     if (!route) {
-      return {
-        title: '渝趣周边游',
-        path: '/pages/index/index'
-      };
+      return { title: '渝趣周边游', path: '/pages/index/index' };
     }
-    
     return {
-      title: `${route.name} - 周边游推荐`,
+      title: `${route.name} - 重庆周边游`,
       path: `/packageRoutes/pages/route-detail/route-detail?id=${route.id}`,
       imageUrl: route.image || '/images/share-bg.png'
     };
   },
 
-  onShareTimeline: function() {
+  onShareTimeline() {
     const route = this.data.route;
     if (!route) {
-      return {
-        title: '渝趣周边游 - 周末出行推荐'
-      };
+      return { title: '渝趣周边游 - 小众徒步路线' };
     }
-    
     return {
-      title: `${route.name} - 周边游推荐`,
+      title: `${route.name} - 重庆周边游`,
       query: `id=${route.id}`,
       imageUrl: route.image || '/images/share-bg.png'
     };

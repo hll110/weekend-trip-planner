@@ -3,35 +3,31 @@
     "pages/index/index",
     "pages/discover/discover",
     "pages/filter/filter",
-    "pages/location-picker/location-picker",
-    "pages/food-guide/food-guide",
-    "pages/culture/culture",
-    "pages/my-routes/my-routes",
-    "pages/my-route-edit/my-route-edit"
+    "pages/location-picker/location-picker"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#c41e2a",
+    "navigationBarBackgroundColor": "#2d6a4f",
     "navigationBarTitleText": "渝趣周边游",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#fef7f0"
+    "backgroundColor": "#f0f7f4"
   },
   "tabBar": {
     "custom": true,
     "color": "#94a3b8",
-    "selectedColor": "#c41e2a",
+    "selectedColor": "#2d6a4f",
     "backgroundColor": "#ffffff",
     "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
+        "text": "路线",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home-active.png"
       },
       {
         "pagePath": "pages/discover/discover",
-        "text": "发现",
+        "text": "探索",
         "iconPath": "images/discover.png",
         "selectedIconPath": "images/discover-active.png"
       },
@@ -45,7 +41,7 @@
   },
   "permission": {
     "scope.userLocation": {
-      "desc": "用于获取您的位置，推荐重庆周边景点和美食"
+      "desc": "用于获取您的位置，推荐重庆周边徒步与游玩路线"
     }
   },
   "requiredPrivateInfos": ["getLocation", "chooseLocation"],

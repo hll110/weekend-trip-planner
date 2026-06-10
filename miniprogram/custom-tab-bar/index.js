@@ -10,12 +10,12 @@ Component({
     list: [
       {
         pagePath: '/pages/index/index',
-        text: '首页',
-        icon: '🏠'
+        text: '路线',
+        icon: '🥾'
       },
       {
         pagePath: '/pages/discover/discover',
-        text: '发现',
+        text: '探索',
         icon: '🧭'
       },
       {

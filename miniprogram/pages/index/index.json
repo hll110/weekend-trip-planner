@@ -1,6 +1,7 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "渝趣周边游",
+  "navigationBarTitleText": "路线",
+  "navigationBarBackgroundColor": "#1b4332",
   "enablePullDownRefresh": true,
-  "backgroundTextStyle": "dark"
+  "backgroundTextStyle": "light"
 }

@@ -6,8 +6,8 @@
   z-index: 9999;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
-  box-shadow: 0 -2rpx 24rpx rgba(196, 30, 42, 0.08);
-  border-top: 1rpx solid rgba(196, 30, 42, 0.06);
+  box-shadow: 0 -2rpx 24rpx rgba(27, 67, 50, 0.08);
+  border-top: 1rpx solid rgba(45, 106, 79, 0.08);
 }
 
 .tab-bar__inner {
@@ -44,8 +44,8 @@
 }
 
 .tab-bar__item--active .tab-bar__icon-wrap {
-  background: linear-gradient(145deg, #fef2f2 0%, #fff5f5 100%);
-  box-shadow: 0 4rpx 16rpx rgba(196, 30, 42, 0.12);
+  background: linear-gradient(145deg, #f0f7f4 0%, #d8f3dc 100%);
+  box-shadow: 0 4rpx 16rpx rgba(45, 106, 79, 0.15);
 }
 
 .tab-bar__icon {
@@ -62,7 +62,7 @@
 }
 
 .tab-bar__item--active .tab-bar__text {
-  color: #c41e2a;
+  color: #2d6a4f;
   font-weight: 600;
 }
 
@@ -70,7 +70,7 @@
   width: 10rpx;
   height: 10rpx;
   border-radius: 50%;
-  background: linear-gradient(135deg, #c41e2a 0%, #e53e3e 100%);
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
   margin-top: 6rpx;
 }
 

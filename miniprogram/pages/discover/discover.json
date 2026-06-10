@@ -1,4 +1,5 @@
 {
-  "navigationBarTitleText": "发现山城",
+  "navigationBarTitleText": "探索",
+  "navigationBarBackgroundColor": "#1b4332",
   "usingComponents": {}
 }

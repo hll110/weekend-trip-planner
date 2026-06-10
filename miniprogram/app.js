@@ -135,15 +135,6 @@ App({
     this.loadRoutes();
   },
 
-  getCultureById: function(id) {
-    return extensions.cultureArticles.find(a => a.id === id);
-  },
-
-  getRandomDialect: function() {
-    const list = extensions.dialectPhrases;
-    return list[Math.floor(Math.random() * list.length)];
-  },
-
   // 获取路线详情
   getRouteById: function(routeId) {
     const id = Number(routeId);

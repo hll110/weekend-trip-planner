@@ -1,29 +1,214 @@
-.page-discover { padding-bottom: 32rpx; }
-.weather-card { background: linear-gradient(135deg, #c41e2a 0%, #e53e3e 100%); color: #fff; border: none; }
-.weather-main { display: flex; align-items: center; }
-.weather-icon { font-size: 64rpx; margin-right: 24rpx; }
-.weather-city { font-size: 32rpx; font-weight: 600; }
-.weather-temp { font-size: 28rpx; margin-top: 8rpx; opacity: 0.95; }
-.weather-sub { font-size: 24rpx; margin-top: 8rpx; opacity: 0.85; }
-.weather-tip { margin-top: 24rpx; font-size: 26rpx; background: rgba(255,255,255,0.15); padding: 16rpx; border-radius: 12rpx; }
-.dialect-phrase { font-size: 40rpx; font-weight: bold; color: #c41e2a; margin: 16rpx 0; }
-.dialect-meaning, .dialect-scene { font-size: 26rpx; color: #64748b; }
-.menu-grid {
+.page {
+  padding: 24rpx;
+  padding-bottom: calc(130rpx + env(safe-area-inset-bottom));
+  min-height: 100vh;
+  background: #f0f7f4;
+  box-sizing: border-box;
+}
+
+/* 天气卡片 */
+.weather-card {
+  background: linear-gradient(160deg, #1b4332 0%, #2d6a4f 55%, #40916c 100%);
+  color: #fff;
+  border-radius: 24rpx;
+  padding: 28rpx;
+  margin-bottom: 24rpx;
+}
+
+.weather-card__main {
+  display: flex;
+  align-items: center;
+}
+
+.weather-card__icon {
+  font-size: 64rpx;
+  margin-right: 24rpx;
+}
+
+.weather-card__city {
+  display: block;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.weather-card__temp {
+  display: block;
+  font-size: 28rpx;
+  margin-top: 8rpx;
+  opacity: 0.95;
+}
+
+.weather-card__sub {
+  display: block;
+  font-size: 24rpx;
+  margin-top: 8rpx;
+  opacity: 0.8;
+}
+
+.weather-card__tip {
+  margin-top: 24rpx;
+  font-size: 26rpx;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 16rpx 20rpx;
+  border-radius: 16rpx;
+  line-height: 1.5;
+}
+
+/* 分类入口 */
+.category-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16rpx;
+  margin-bottom: 28rpx;
+}
+
+.category-card {
+  text-align: center;
+  padding: 28rpx 12rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  box-shadow: 0 2rpx 12rpx rgba(27, 67, 50, 0.08);
+}
+
+.category-card--hover {
+  transform: scale(0.96);
+  opacity: 0.9;
+}
+
+.category-card--hiking { border-top: 6rpx solid #2d6a4f; }
+.category-card--scenic { border-top: 6rpx solid #dd6b20; }
+.category-card--food { border-top: 6rpx solid #c41e2a; }
+
+.category-card__icon {
+  display: block;
+  font-size: 48rpx;
+  margin-bottom: 10rpx;
+}
+
+.category-card__name {
+  display: block;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.category-card__count {
+  display: block;
+  font-size: 22rpx;
+  color: #94a3b8;
+  margin-top: 6rpx;
+}
+
+/* 区块 */
+.section {
   margin-bottom: 24rpx;
 }
-.menu-item { text-align: center; padding: 28rpx 12rpx; }
-.menu-icon { display: block; font-size: 48rpx; margin-bottom: 12rpx; }
-.menu-name { font-size: 26rpx; color: #1e293b; }
-.section-title { font-size: 30rpx; font-weight: 600; margin-bottom: 20rpx; color: #1e293b; }
-.festival-item { padding: 20rpx 0; border-bottom: 1rpx solid #f1f5f9; }
-.festival-item:last-child { border-bottom: none; }
-.festival-name { font-size: 28rpx; font-weight: 600; color: #c41e2a; }
-.festival-meta { font-size: 24rpx; color: #94a3b8; margin: 8rpx 0; }
-.festival-desc { font-size: 26rpx; color: #64748b; }
-.chip-row { display: flex; flex-wrap: wrap; gap: 16rpx; }
-.chip { padding: 12rpx 28rpx; background: #fef2f2; color: #c41e2a; border-radius: 32rpx; font-size: 26rpx; }
-.chip.small { font-size: 24rpx; padding: 10rpx 20rpx; }
-.chip-row.wrap { max-height: 320rpx; overflow-y: auto; }
+
+.section.card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  box-shadow: 0 2rpx 12rpx rgba(27, 67, 50, 0.06);
+}
+
+.section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.section__title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.section__more {
+  font-size: 26rpx;
+  color: #2d6a4f;
+}
+
+/* 精选列表 */
+.featured-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.featured-item {
+  display: flex;
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 12rpx rgba(27, 67, 50, 0.08);
+}
+
+.featured-item--hover {
+  opacity: 0.92;
+}
+
+.featured-item__img {
+  width: 200rpx;
+  height: 160rpx;
+  flex-shrink: 0;
+}
+
+.featured-item__body {
+  flex: 1;
+  padding: 20rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-item__name {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8rpx;
+}
+
+.featured-item__meta {
+  font-size: 24rpx;
+  color: #94a3b8;
+  margin-bottom: 8rpx;
+}
+
+.featured-item__rating {
+  font-size: 24rpx;
+  color: #d69e2e;
+  font-weight: 600;
+}
+
+.featured-item__star { margin-right: 4rpx; }
+
+/* 标签 */
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  margin-top: 16rpx;
+}
+
+.chip {
+  padding: 14rpx 28rpx;
+  background: #f0f7f4;
+  color: #2d6a4f;
+  border-radius: 32rpx;
+  font-size: 26rpx;
+}
+
+.chip--small {
+  font-size: 24rpx;
+  padding: 10rpx 22rpx;
+}
+
+.chip--hover {
+  background: #d8f3dc;
+}
+
+.chip-row.wrap {
+  max-height: 360rpx;
+  overflow-y: auto;
+}

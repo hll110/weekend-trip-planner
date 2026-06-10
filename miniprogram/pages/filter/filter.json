@@ -1,6 +1,7 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "筛选路线",
+  "navigationBarTitleText": "筛选",
+  "navigationBarBackgroundColor": "#1b4332",
   "disableScroll": true,
   "enablePullDownRefresh": false
 }

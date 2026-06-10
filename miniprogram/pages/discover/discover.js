@@ -7,51 +7,45 @@ const tabBar = require('../../utils/tab-bar.js');
 Page({
   data: {
     weather: null,
-    dialect: null,
-    festivals: ext.festivals,
-    districts: ext.districts.filter(d => d.id !== 'all').slice(0, 12),
-    districtTotal: ext.districts.length - 1
+    districts: ext.districts.filter((d) => d.id !== 'all').slice(0, 16),
+    districtTotal: ext.districts.length - 1,
+    seasons: ext.seasons.filter((s) => s.id !== 'all'),
+    hikingRoutes: [],
+    hikingCount: 0,
+    scenicCount: 0,
+    foodCount: 0
   },
 
   onLoad() {
     this.refreshWeather();
-    this.pickDialect();
+    this.loadRouteStats();
   },
 
   onShow() {
     tabBar.setTabSelected(this, 1);
     this.refreshWeather();
+    this.loadRouteStats();
   },
 
   refreshWeather() {
     this.setData({ weather: weatherUtil.getChongqingWeather() });
   },
 
-  pickDialect() {
-    const list = ext.dialectPhrases;
-    const dialect = list[Math.floor(Math.random() * list.length)];
-    this.setData({ dialect });
+  loadRouteStats() {
+    const routes = app.globalData.routes || [];
+    const hikingRoutes = routes
+      .filter((r) => r.type === 'hiking' && r.id >= 13)
+      .slice(0, 6);
+    this.setData({
+      hikingRoutes,
+      hikingCount: routes.filter((r) => r.type === 'hiking').length,
+      scenicCount: routes.filter((r) => r.type === 'scenic').length,
+      foodCount: routes.filter((r) => r.type === 'food').length
+    });
   },
 
-  goFood() {
-    nav.open('/pages/food-guide/food-guide');
-  },
-
-  goCulture() {
-    nav.open('/pages/culture/culture');
-  },
-
-  goMyRoutes() {
-    nav.open('/pages/my-routes/my-routes');
-  },
-
-  applyAndHome(patch) {
-    app.globalData.filters = { ...app.globalData.filters, ...patch };
-    nav.toHome();
-  },
-
-  goFestivalRoutes(e) {
-    this.applyAndHome({ festival: e.currentTarget.dataset.id });
+  filterByType(e) {
+    this.applyAndHome({ type: e.currentTarget.dataset.type });
   },
 
   filterByDistrict(e) {
@@ -62,9 +56,22 @@ Page({
     this.applyAndHome({ season: e.currentTarget.dataset.id });
   },
 
+  goToRoute(e) {
+    nav.toRouteDetail(e.currentTarget.dataset.id);
+  },
+
+  goAllHiking() {
+    this.applyAndHome({ type: 'hiking' });
+  },
+
+  applyAndHome(patch) {
+    app.globalData.filters = { ...app.globalData.filters, ...patch };
+    nav.toHome();
+  },
+
   onShareAppMessage() {
     return {
-      title: '渝趣周边游 - 发现山城',
+      title: '渝趣周边游 - 重庆小众徒步路线',
       path: '/pages/discover/discover'
     };
   }

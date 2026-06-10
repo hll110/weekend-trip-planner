@@ -1,4 +1,4 @@
-/** 路线数据 - 图片已下载至 miniprogram/packageRoutes/packageRoutes/images/routes/ */
+/** 路线数据 - 图片已下载至 miniprogram/packageRoutes/images/routes/ */
 module.exports = [
   {
     "id": 1,
@@ -737,5 +737,2450 @@ module.exports = [
       "/packageRoutes/images/routes/12-3.jpg"
     ],
     "image": "/packageRoutes/images/routes/12-1.jpg"
+  },
+  {
+    "id": 13,
+    "name": "龙脊山古道",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "nanan",
+    "seasons": [
+      "autumn"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约8公里",
+    "elevation": "约350米",
+    "difficulty": "★★☆☆☆",
+    "rating": 4.5,
+    "reviews": 47,
+    "description": "小红书本地人私藏 · 主城最近的野路",
+    "highlights": [
+      "三毛故居",
+      "明清石板路",
+      "废弃古寺",
+      "龙脊山观景台",
+      "长江交汇处"
+    ],
+    "food": [
+      "老街豆花饭",
+      "山城小汤圆",
+      "烤红薯"
+    ],
+    "spots": [
+      {
+        "name": "起点：黄桷垭老街牌坊",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5436,
+        "lng": 106.6012
+      },
+      {
+        "name": "龙脊山古道入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5428,
+        "lng": 106.5998
+      },
+      {
+        "name": "废弃古寺遗址",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5398,
+        "lng": 106.5975
+      },
+      {
+        "name": "龙脊山观景台",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5385,
+        "lng": 106.5962
+      },
+      {
+        "name": "南山植物园后门",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.537,
+        "lng": 106.5945
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "老街豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "山城小汤圆",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "所有游客都去南山",
+      "古石板路保存完好",
+      "废弃古寺有种探险",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.5436,
+      "lng": 106.6012
+    },
+    "images": [
+      "/packageRoutes/images/routes/13-1.jpg",
+      "/packageRoutes/images/routes/13-2.jpg",
+      "/packageRoutes/images/routes/13-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/13-1.jpg"
+  },
+  {
+    "id": 14,
+    "name": "铁山坪花岩沟野瀑布",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "jiangbei",
+    "seasons": [
+      "summer"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约5公里",
+    "elevation": "约200米",
+    "difficulty": "★★☆☆☆",
+    "rating": 4.6,
+    "reviews": 54,
+    "description": "抖音隐藏款瀑布 · 本地人才知道",
+    "highlights": [
+      "五宝镇老街",
+      "溪谷浅水滩",
+      "野泳水潭",
+      "花岩沟瀑布"
+    ],
+    "food": [
+      "农家豆花饭",
+      "老腊肉",
+      "溪鱼"
+    ],
+    "spots": [
+      {
+        "name": "起点：五宝镇公交站",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6285,
+        "lng": 106.6358
+      },
+      {
+        "name": "花岩沟入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6258,
+        "lng": 106.6342
+      },
+      {
+        "name": "花岩沟瀑布",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6225,
+        "lng": 106.6318
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "老腊肉",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "铁山坪公园大家都",
+      "需要从五宝镇绕进",
+      "本地人夏天野泳的",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.6285,
+      "lng": 106.6358
+    },
+    "images": [
+      "/packageRoutes/images/routes/14-1.jpg",
+      "/packageRoutes/images/routes/14-2.jpg",
+      "/packageRoutes/images/routes/14-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/14-1.jpg"
+  },
+  {
+    "id": 15,
+    "name": "磁器口后山抗战遗址穿越",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "shapingba",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约10公里",
+    "elevation": "约400米",
+    "difficulty": "★★☆☆☆",
+    "rating": 4.6,
+    "reviews": 61,
+    "description": "99%游客不知道的玩法",
+    "highlights": [
+      "磁器口古镇",
+      "宝轮寺",
+      "抗战碉堡遗址",
+      "防空洞",
+      "山脊俯瞰"
+    ],
+    "food": [
+      "陈麻花",
+      "毛血旺",
+      "豆花饭",
+      "千张皮"
+    ],
+    "spots": [
+      {
+        "name": "起点：磁器口古镇牌坊",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5378,
+        "lng": 106.4512
+      },
+      {
+        "name": "后山入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5362,
+        "lng": 106.4498
+      },
+      {
+        "name": "抗战碉堡遗址1号",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5345,
+        "lng": 106.4475
+      },
+      {
+        "name": "防空洞入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5328,
+        "lng": 106.4452
+      },
+      {
+        "name": "山脊最高点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5312,
+        "lng": 106.4438
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "陈麻花",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "毛血旺",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "游客只逛古镇下面",
+      "后山有大量抗战时",
+      "从山上俯瞰磁器口",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.5378,
+      "lng": 106.4512
+    },
+    "images": [
+      "/packageRoutes/images/routes/15-1.jpg",
+      "/packageRoutes/images/routes/15-2.jpg",
+      "/packageRoutes/images/routes/15-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/15-1.jpg"
+  },
+  {
+    "id": 16,
+    "name": "北碚胜天湖绝壁环线",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "beibei",
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约12公里",
+    "elevation": "约500米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.7,
+    "reviews": 68,
+    "description": "小红书\"重庆小九寨\"",
+    "highlights": [
+      "翡翠绿湖水",
+      "绝壁栈道",
+      "湖尾浅滩",
+      "悬崖观景点"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：胜天湖大坝",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8756,
+        "lng": 106.5234
+      },
+      {
+        "name": "第一个观景点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8742,
+        "lng": 106.5218
+      },
+      {
+        "name": "绝壁栈道开始",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8728,
+        "lng": 106.5202
+      },
+      {
+        "name": "绝壁段结束",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8712,
+        "lng": 106.5185
+      },
+      {
+        "name": "湖尾浅滩",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8698,
+        "lng": 106.5168
+      },
+      {
+        "name": "回到大坝",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8756,
+        "lng": 106.5234
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "金刀峡景区大家去",
+      "环湖路线有一段需",
+      "水位变化大，不同",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.8756,
+      "lng": 106.5234
+    },
+    "images": [
+      "/packageRoutes/images/routes/16-1.jpg",
+      "/packageRoutes/images/routes/16-2.jpg",
+      "/packageRoutes/images/routes/16-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/16-1.jpg"
+  },
+  {
+    "id": 17,
+    "name": "南川山王坪后山野路",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "nanchuan",
+    "seasons": [
+      "autumn"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约15公里",
+    "elevation": "约600米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.6,
+    "reviews": 75,
+    "description": "抖音\"一半秋天一半夏天\"",
+    "highlights": [
+      "喀斯特石林",
+      "水杉林（秋色）",
+      "山顶草甸",
+      "日出（露营）"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：山王坪镇",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1256,
+        "lng": 107.1234
+      },
+      {
+        "name": "后山入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1242,
+        "lng": 107.1218
+      },
+      {
+        "name": "喀斯特洼地",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1218,
+        "lng": 107.1192
+      },
+      {
+        "name": "水杉林入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1195,
+        "lng": 107.1168
+      },
+      {
+        "name": "水杉林最深处",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1178,
+        "lng": 107.1152
+      },
+      {
+        "name": "山顶草甸",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1155,
+        "lng": 107.1128
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "景区正门收门票6",
+      "秋季的水杉林一半",
+      "可以在山顶露营看",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.1256,
+      "lng": 107.1234
+    },
+    "images": [
+      "/packageRoutes/images/routes/17-1.jpg",
+      "/packageRoutes/images/routes/17-2.jpg",
+      "/packageRoutes/images/routes/17-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/17-1.jpg"
+  },
+  {
+    "id": 18,
+    "name": "武隆寺院坪明古道",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "wulong",
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约10公里",
+    "elevation": "约500米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.6,
+    "reviews": 82,
+    "description": "比天生三桥更值得去的地方",
+    "highlights": [
+      "明代石板路",
+      "悬崖古寺遗址",
+      "乌江峡谷"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：和顺镇",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3256,
+        "lng": 107.7234
+      },
+      {
+        "name": "古道入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3242,
+        "lng": 107.7218
+      },
+      {
+        "name": "第一个休息点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3218,
+        "lng": 107.7192
+      },
+      {
+        "name": "悬崖边缘",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3195,
+        "lng": 107.7168
+      },
+      {
+        "name": "寺院坪古寺遗址",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3185,
+        "lng": 107.7155
+      },
+      {
+        "name": "乌江观景点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3175,
+        "lng": 107.7142
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "武隆大家都去天生",
+      "寺院坪是明代商道",
+      "悬崖上的废弃古寺",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.3256,
+      "lng": 107.7234
+    },
+    "images": [
+      "/packageRoutes/images/routes/18-1.jpg",
+      "/packageRoutes/images/routes/18-2.jpg",
+      "/packageRoutes/images/routes/18-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/18-1.jpg"
+  },
+  {
+    "id": 19,
+    "name": "涂山湖-老君洞穿越",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "nanan",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约6公里",
+    "elevation": "约250米",
+    "difficulty": "★★☆☆☆",
+    "rating": 4.6,
+    "reviews": 89,
+    "description": "主城最被低估的徒步路线",
+    "highlights": [
+      "涂山湖",
+      "涂山镇老街",
+      "农家菜地",
+      "老君洞道观"
+    ],
+    "food": [
+      "农家自制豆腐",
+      "豆花饭",
+      "农家小菜",
+      "老君洞道观茶"
+    ],
+    "spots": [
+      {
+        "name": "起点：涂山湖",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5512,
+        "lng": 106.5856
+      },
+      {
+        "name": "涂山镇老街",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5528,
+        "lng": 106.5842
+      },
+      {
+        "name": "上山小路",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5538,
+        "lng": 106.5828
+      },
+      {
+        "name": "第一个山头",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5552,
+        "lng": 106.5812
+      },
+      {
+        "name": "老君洞道观",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5568,
+        "lng": 106.5798
+      },
+      {
+        "name": "南山脊线",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5582,
+        "lng": 106.5782
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家自制豆腐",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "连接两个道教洞穴",
+      "途经的涂山镇老街",
+      "可以买到农家自制",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.5512,
+      "lng": 106.5856
+    },
+    "images": [
+      "/packageRoutes/images/routes/19-1.jpg",
+      "/packageRoutes/images/routes/19-2.jpg",
+      "/packageRoutes/images/routes/19-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/19-1.jpg"
+  },
+  {
+    "id": 20,
+    "name": "江津四面山后山古道",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "jiangjin",
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约25公里",
+    "elevation": "约1200米",
+    "difficulty": "★★★★☆",
+    "rating": 4.8,
+    "reviews": 96,
+    "description": "四面山的另一面",
+    "highlights": [
+      "中山古镇",
+      "原始石板路",
+      "废弃村落",
+      "山脊风光"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：中山古镇",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 28.8256,
+        "lng": 106.3234
+      },
+      {
+        "name": "后山入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 28.8242,
+        "lng": 106.3218
+      },
+      {
+        "name": "第一个山头",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 28.8195,
+        "lng": 106.3168
+      },
+      {
+        "name": "废弃村落",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 28.8148,
+        "lng": 106.3115
+      },
+      {
+        "name": "山脊",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 28.8098,
+        "lng": 106.3062
+      },
+      {
+        "name": "四面山后山区域",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 28.8048,
+        "lng": 106.3008
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "四面山景区门票1",
+      "这是几百年前进入",
+      "沿途经过废弃村落",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 28.8256,
+      "lng": 106.3234
+    },
+    "images": [
+      "/packageRoutes/images/routes/20-1.jpg",
+      "/packageRoutes/images/routes/20-2.jpg",
+      "/packageRoutes/images/routes/20-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/20-1.jpg"
+  },
+  {
+    "id": 21,
+    "name": "黔江小南海环湖野路",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "qianjiang",
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约8公里",
+    "elevation": "约200米",
+    "difficulty": "★★☆☆☆",
+    "rating": 4.6,
+    "reviews": 103,
+    "description": "地震遗址上的徒步",
+    "highlights": [
+      "小南海湖景",
+      "水下废墟",
+      "地震遗址"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：小南海镇",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.4256,
+        "lng": 108.7234
+      },
+      {
+        "name": "小南海湖边",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.4242,
+        "lng": 108.7218
+      },
+      {
+        "name": "湖对岸",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.4198,
+        "lng": 108.7168
+      },
+      {
+        "name": "地震遗址观景点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.4182,
+        "lng": 108.7142
+      },
+      {
+        "name": "湖尾",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.4168,
+        "lng": 108.7118
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "小南海是1856",
+      "游客都在正面看，",
+      "水下有被淹没的村",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.4256,
+      "lng": 108.7234
+    },
+    "images": [
+      "/packageRoutes/images/routes/21-1.jpg",
+      "/packageRoutes/images/routes/21-2.jpg",
+      "/packageRoutes/images/routes/21-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/21-1.jpg"
+  },
+  {
+    "id": 22,
+    "name": "合川钓鱼城悬崖古道",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "hechuan",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约8公里",
+    "elevation": "约400米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.6,
+    "reviews": 110,
+    "description": "蒙古帝国西征终结地",
+    "highlights": [
+      "悬崖古道",
+      "军事地道",
+      "隐秘城门",
+      "钓鱼城仰望"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：钓鱼城码头",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.9256,
+        "lng": 106.3234
+      },
+      {
+        "name": "悬崖古道入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.9242,
+        "lng": 106.3218
+      },
+      {
+        "name": "悬崖路段",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.9218,
+        "lng": 106.3192
+      },
+      {
+        "name": "古代军事地道入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.9195,
+        "lng": 106.3168
+      },
+      {
+        "name": "隐秘城门遗址",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.9175,
+        "lng": 106.3142
+      },
+      {
+        "name": "钓鱼城下方观景点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.9162,
+        "lng": 106.3128
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "钓鱼城景区大家都",
+      "这是古代守军的秘",
+      "从下方仰望钓鱼城",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.9256,
+      "lng": 106.3234
+    },
+    "images": [
+      "/packageRoutes/images/routes/22-1.jpg",
+      "/packageRoutes/images/routes/22-2.jpg",
+      "/packageRoutes/images/routes/22-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/22-1.jpg"
+  },
+  {
+    "id": 23,
+    "name": "石柱黄水土家森林穿越",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "shizhu",
+    "seasons": [
+      "summer",
+      "autumn"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约12公里",
+    "elevation": "约500米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.6,
+    "reviews": 117,
+    "description": "重庆的\"小瑞士\"深处",
+    "highlights": [
+      "土家族村寨",
+      "千年古柏林",
+      "高山草甸"
+    ],
+    "food": [
+      "土家族腊肉",
+      "莼菜",
+      "土家族酸汤鱼",
+      "农家豆花饭"
+    ],
+    "spots": [
+      {
+        "name": "起点：黄水镇",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 30.1256,
+        "lng": 108.3234
+      },
+      {
+        "name": "土家族村寨",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 30.1242,
+        "lng": 108.3218
+      },
+      {
+        "name": "原始柏林入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 30.1198,
+        "lng": 108.3168
+      },
+      {
+        "name": "林间空地",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 30.1172,
+        "lng": 108.3132
+      },
+      {
+        "name": "山脊线",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 30.1148,
+        "lng": 108.3098
+      },
+      {
+        "name": "高山草甸",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 30.1132,
+        "lng": 108.3072
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "土家族腊肉",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "莼菜",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "黄水镇是土家族聚",
+      "深处的原始柏林和",
+      "可以体验土家族美",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 30.1256,
+      "lng": 108.3234
+    },
+    "images": [
+      "/packageRoutes/images/routes/23-1.jpg",
+      "/packageRoutes/images/routes/23-2.jpg",
+      "/packageRoutes/images/routes/23-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/23-1.jpg"
+  },
+  {
+    "id": 24,
+    "name": "涪陵武陵山大裂谷野路",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "fuling",
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约14公里",
+    "elevation": "约700米",
+    "difficulty": "★★★★☆",
+    "rating": 4.7,
+    "reviews": 124,
+    "description": "景区背后的真正探险",
+    "highlights": [
+      "废弃林场",
+      "地质裂缝",
+      "裂谷最深处"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：武陵山乡",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5256,
+        "lng": 107.3234
+      },
+      {
+        "name": "废弃林场",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5228,
+        "lng": 107.3202
+      },
+      {
+        "name": "野线入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5198,
+        "lng": 107.3168
+      },
+      {
+        "name": "第一个地质裂缝",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5172,
+        "lng": 107.3132
+      },
+      {
+        "name": "裂谷最深处",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5148,
+        "lng": 107.3098
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "景区门票100元",
+      "野线从废弃林场进",
+      "但必须有向导，否",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.5256,
+      "lng": 107.3234
+    },
+    "images": [
+      "/packageRoutes/images/routes/24-1.jpg",
+      "/packageRoutes/images/routes/24-2.jpg",
+      "/packageRoutes/images/routes/24-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/24-1.jpg"
+  },
+  {
+    "id": 25,
+    "name": "璧山青龙湖竹林古道",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "bishan",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约5公里",
+    "elevation": "约150米",
+    "difficulty": "★☆☆☆☆",
+    "rating": 4.5,
+    "reviews": 131,
+    "description": "主城1小时可达的世外桃源",
+    "highlights": [
+      "竹林小径",
+      "清代古石桥",
+      "古水磨坊遗址",
+      "青龙湖"
+    ],
+    "food": [
+      "青龙湖农家乐",
+      "湖鲜鱼",
+      "农家豆花饭",
+      "橘子"
+    ],
+    "spots": [
+      {
+        "name": "起点：青龙湖",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6256,
+        "lng": 106.2234
+      },
+      {
+        "name": "竹林入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6242,
+        "lng": 106.2218
+      },
+      {
+        "name": "清代古石桥",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6228,
+        "lng": 106.2202
+      },
+      {
+        "name": "古水磨坊遗址",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6212,
+        "lng": 106.2188
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "青龙湖农家乐",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "湖鲜鱼",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "璧山本地人周末去",
+      "有清代古石桥和古",
+      "竹林小径很出片",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.6256,
+      "lng": 106.2234
+    },
+    "images": [
+      "/packageRoutes/images/routes/25-1.jpg",
+      "/packageRoutes/images/routes/25-2.jpg",
+      "/packageRoutes/images/routes/25-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/25-1.jpg"
+  },
+  {
+    "id": 26,
+    "name": "城口黄安坝高山草甸",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "chengkou",
+    "seasons": [
+      "summer",
+      "autumn"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约10公里",
+    "elevation": "约600米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.7,
+    "reviews": 138,
+    "description": "重庆的\"内蒙古\"",
+    "highlights": [
+      "河鱼乡",
+      "高山草甸",
+      "夏季花海",
+      "秋季金黄"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：河鱼乡政府",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 31.9256,
+        "lng": 108.7234
+      },
+      {
+        "name": "上山小路",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 31.9242,
+        "lng": 108.7218
+      },
+      {
+        "name": "第一个山头",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 31.9198,
+        "lng": 108.7168
+      },
+      {
+        "name": "黄安坝草甸入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 31.9148,
+        "lng": 108.7118
+      },
+      {
+        "name": "草甸深处",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 31.9132,
+        "lng": 108.7092
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "城口是重庆最偏远",
+      "黄安坝草甸海拔2",
+      "因为太远，几乎没",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 31.9256,
+      "lng": 108.7234
+    },
+    "images": [
+      "/packageRoutes/images/routes/26-1.jpg",
+      "/packageRoutes/images/routes/26-2.jpg",
+      "/packageRoutes/images/routes/26-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/26-1.jpg"
+  },
+  {
+    "id": 27,
+    "name": "丰都雪玉洞悬棺古道",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "fengdu",
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约10公里",
+    "elevation": "约400米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.6,
+    "reviews": 145,
+    "description": "探秘+徒步的完美结合",
+    "highlights": [
+      "峡谷风光",
+      "悬棺",
+      "溶洞",
+      "山间湖泊"
+    ],
+    "food": [
+      "丰都麻辣鸡",
+      "农家豆花饭",
+      "老腊肉"
+    ],
+    "spots": [
+      {
+        "name": "起点：都督乡",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.7256,
+        "lng": 107.8234
+      },
+      {
+        "name": "峡谷入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.7242,
+        "lng": 107.8218
+      },
+      {
+        "name": "悬棺观景点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.7198,
+        "lng": 107.8168
+      },
+      {
+        "name": "溶洞入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.7172,
+        "lng": 107.8132
+      },
+      {
+        "name": "山间湖泊",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.7148,
+        "lng": 107.8098
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "丰都麻辣鸡",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "丰都大家都去鬼城",
+      "悬崖上有古代悬棺",
+      "溶洞+悬棺+古道",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.7256,
+      "lng": 107.8234
+    },
+    "images": [
+      "/packageRoutes/images/routes/27-1.jpg",
+      "/packageRoutes/images/routes/27-2.jpg",
+      "/packageRoutes/images/routes/27-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/27-1.jpg"
+  },
+  {
+    "id": 28,
+    "name": "北碚金刚碑古村秘境",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "beibei",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约7公里",
+    "elevation": "约250米",
+    "difficulty": "★★☆☆☆",
+    "rating": 4.5,
+    "reviews": 152,
+    "description": "小红书\"重庆最美废弃村庄\" · 主城最被低估的野路起点",
+    "highlights": [
+      "金刚碑老街",
+      "嘉陵江边",
+      "江边野路",
+      "后山步道"
+    ],
+    "food": [
+      "文艺咖啡馆",
+      "农家豆花饭",
+      "江边烧烤"
+    ],
+    "spots": [
+      {
+        "name": "起点：金刚碑村入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8356,
+        "lng": 106.4234
+      },
+      {
+        "name": "嘉陵江边",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8342,
+        "lng": 106.4218
+      },
+      {
+        "name": "江边戏水点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8318,
+        "lng": 106.4192
+      },
+      {
+        "name": "后山步道",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8298,
+        "lng": 106.4168
+      },
+      {
+        "name": "缙云山山脚古道",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8272,
+        "lng": 106.4132
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "文艺咖啡馆",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "金刚碑虽有人知道",
+      "后山野路+江边秘",
+      "可以从这里一路野",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.8356,
+      "lng": 106.4234
+    },
+    "images": [
+      "/packageRoutes/images/routes/28-1.jpg",
+      "/packageRoutes/images/routes/28-2.jpg",
+      "/packageRoutes/images/routes/28-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/28-1.jpg"
+  },
+  {
+    "id": 29,
+    "name": "南山黄桷古道-老君洞野路穿越",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "nanan",
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约8公里",
+    "elevation": "约300米",
+    "difficulty": "★★☆☆☆",
+    "rating": 4.6,
+    "reviews": 159,
+    "description": "重庆古驿道 · 主城最经典的野路",
+    "highlights": [
+      "黄桷垭老街",
+      "明清古驿道",
+      "涂山湖",
+      "老君洞道观"
+    ],
+    "food": [
+      "黄桷垭老街：豆花饭、小汤圆",
+      "涂山镇：农家自制豆腐",
+      "老君洞道观：茶"
+    ],
+    "spots": [
+      {
+        "name": "起点：黄桷垭老街牌坊",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5436,
+        "lng": 106.6012
+      },
+      {
+        "name": "黄桷古道入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5428,
+        "lng": 106.5998
+      },
+      {
+        "name": "古道中段",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5398,
+        "lng": 106.5975
+      },
+      {
+        "name": "龙门浩老街附近",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5385,
+        "lng": 106.5962
+      },
+      {
+        "name": "涂山湖",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5512,
+        "lng": 106.5856
+      },
+      {
+        "name": "老君洞道观",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5568,
+        "lng": 106.5798
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "黄桷垭老街：豆花饭、小汤",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "涂山镇：农家自制豆腐",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "黄桷垭老街游客多",
+      "从古道一路穿越到",
+      "明清古驿道的历史",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.5436,
+      "lng": 106.6012
+    },
+    "images": [
+      "/packageRoutes/images/routes/29-1.jpg",
+      "/packageRoutes/images/routes/29-2.jpg",
+      "/packageRoutes/images/routes/29-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/29-1.jpg"
+  },
+  {
+    "id": 30,
+    "name": "歌乐山后山野路穿越",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "shapingba",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约10公里",
+    "elevation": "约400米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.7,
+    "reviews": 166,
+    "description": "从渣滓洞到白公岭的野路",
+    "highlights": [
+      "渣滓洞（不进入）",
+      "白公岭",
+      "山脊俯瞰",
+      "林园"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：渣滓洞停车场",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5156,
+        "lng": 106.4234
+      },
+      {
+        "name": "后山入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5142,
+        "lng": 106.4218
+      },
+      {
+        "name": "白公岭附近",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5098,
+        "lng": 106.4168
+      },
+      {
+        "name": "歌乐山森林公园外围",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5072,
+        "lng": 106.4132
+      },
+      {
+        "name": "林园",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5048,
+        "lng": 106.4098
+      },
+      {
+        "name": "磁器口后山",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.5362,
+        "lng": 106.4498
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "渣滓洞/白公馆游",
+      "后山野路可以穿越",
+      "可以连接磁器口后",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.5156,
+      "lng": 106.4234
+    },
+    "images": [
+      "/packageRoutes/images/routes/30-1.jpg",
+      "/packageRoutes/images/routes/30-2.jpg",
+      "/packageRoutes/images/routes/30-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/30-1.jpg"
+  },
+  {
+    "id": 31,
+    "name": "缙云山后山野路（北碚段）",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "beibei",
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约12公里",
+    "elevation": "约600米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.7,
+    "reviews": 173,
+    "description": "缙云山的另一面 · 本地人私藏",
+    "highlights": [
+      "后山茶园",
+      "缙云山山脊",
+      "狮子峰后方"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：北碚城南",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8256,
+        "lng": 106.3234
+      },
+      {
+        "name": "后山入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8242,
+        "lng": 106.3218
+      },
+      {
+        "name": "后山茶园",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8198,
+        "lng": 106.3168
+      },
+      {
+        "name": "非景区区域）",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8148,
+        "lng": 106.3118
+      },
+      {
+        "name": "狮子峰后方",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8098,
+        "lng": 106.3068
+      },
+      {
+        "name": "缙云山景区大门",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.8048,
+        "lng": 106.3018
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "缙云山景区大家都",
+      "后山茶园和山脊线",
+      "看日出的野点比狮",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.8256,
+      "lng": 106.3234
+    },
+    "images": [
+      "/packageRoutes/images/routes/31-1.jpg",
+      "/packageRoutes/images/routes/31-2.jpg",
+      "/packageRoutes/images/routes/31-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/31-1.jpg"
+  },
+  {
+    "id": 32,
+    "name": "铁山坪后山森林穿越",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "jiangbei",
+    "seasons": [
+      "summer",
+      "autumn"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约7公里",
+    "elevation": "约300米",
+    "difficulty": "★★☆☆☆",
+    "rating": 4.5,
+    "reviews": 180,
+    "description": "主城最近的原始森林感",
+    "highlights": [
+      "铁山坪后山森林",
+      "花岩沟瀑布",
+      "铜锣峡观景点"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：五宝镇公交站",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6285,
+        "lng": 106.6358
+      },
+      {
+        "name": "后山入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6258,
+        "lng": 106.6342
+      },
+      {
+        "name": "花岩沟瀑布",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6225,
+        "lng": 106.6318
+      },
+      {
+        "name": "铁山坪山脊",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6198,
+        "lng": 106.6282
+      },
+      {
+        "name": "铜锣峡观景点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6172,
+        "lng": 106.6248
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "铁山坪公园正门大",
+      "花岩沟瀑布+铜锣",
+      "夏天避暑效果一流",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.6285,
+      "lng": 106.6358
+    },
+    "images": [
+      "/packageRoutes/images/routes/32-1.jpg",
+      "/packageRoutes/images/routes/32-2.jpg",
+      "/packageRoutes/images/routes/32-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/32-1.jpg"
+  },
+  {
+    "id": 33,
+    "name": "照母山城市森林野路",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "yubei",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约5公里",
+    "elevation": "约150米",
+    "difficulty": "★☆☆☆☆",
+    "rating": 4.5,
+    "reviews": 187,
+    "description": "主城中心的野路 · 都市秘境",
+    "highlights": [
+      "竹林",
+      "照母山最高点",
+      "水库",
+      "古寨遗址"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：照母山公园北门",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6156,
+        "lng": 106.5234
+      },
+      {
+        "name": "公园内部野路",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6142,
+        "lng": 106.5218
+      },
+      {
+        "name": "照母山最高点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6118,
+        "lng": 106.5192
+      },
+      {
+        "name": "水库",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6098,
+        "lng": 106.5168
+      },
+      {
+        "name": "公园南门",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.6072,
+        "lng": 106.5132
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "照母山公园很多人",
+      "公园内部的小路和",
+      "是主城最近的\"野",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.6156,
+      "lng": 106.5234
+    },
+    "images": [
+      "/packageRoutes/images/routes/33-1.jpg",
+      "/packageRoutes/images/routes/33-2.jpg",
+      "/packageRoutes/images/routes/33-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/33-1.jpg"
+  },
+  {
+    "id": 34,
+    "name": "明月山古道（巴南段）",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "banan",
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约12公里",
+    "elevation": "约600米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.6,
+    "reviews": 194,
+    "description": "重庆东部屏障古道",
+    "highlights": [
+      "明清古驿道",
+      "明月山山脊",
+      "古烽火台遗址",
+      "山顶草甸"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：南泉镇",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3256,
+        "lng": 106.7234
+      },
+      {
+        "name": "古道入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3242,
+        "lng": 106.7218
+      },
+      {
+        "name": "第一个休息点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3198,
+        "lng": 106.7168
+      },
+      {
+        "name": "明月山山脊",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3148,
+        "lng": 106.7118
+      },
+      {
+        "name": "古烽火台遗址",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3098,
+        "lng": 106.7068
+      },
+      {
+        "name": "山顶草甸",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.3072,
+        "lng": 106.7042
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "明月山是重庆的天",
+      "古驿道保存较好，",
+      "山顶草甸和烽火台",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.3256,
+      "lng": 106.7234
+    },
+    "images": [
+      "/packageRoutes/images/routes/34-1.jpg",
+      "/packageRoutes/images/routes/34-2.jpg",
+      "/packageRoutes/images/routes/34-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/34-1.jpg"
+  },
+  {
+    "id": 35,
+    "name": "中梁山矿坑野路",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "jiulongpo",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约10公里",
+    "elevation": "约400米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.7,
+    "reviews": 201,
+    "description": "工业遗迹+自然修复的野路",
+    "highlights": [
+      "废弃矿区",
+      "矿坑湖",
+      "中梁山山脊"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：中梁山镇",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.4256,
+        "lng": 106.3234
+      },
+      {
+        "name": "废弃矿区入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.4242,
+        "lng": 106.3218
+      },
+      {
+        "name": "矿坑湖",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.4198,
+        "lng": 106.3168
+      },
+      {
+        "name": "中梁山山脊",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.4148,
+        "lng": 106.3118
+      },
+      {
+        "name": "山顶观景点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.4098,
+        "lng": 106.3068
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "中梁山是重庆的煤",
+      "废弃矿坑积水形成",
+      "工业遗迹+自然修",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.4256,
+      "lng": 106.3234
+    },
+    "images": [
+      "/packageRoutes/images/routes/35-1.jpg",
+      "/packageRoutes/images/routes/35-2.jpg",
+      "/packageRoutes/images/routes/35-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/35-1.jpg"
+  },
+  {
+    "id": 36,
+    "name": "樵坪山古寨探秘",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "banan",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约6公里",
+    "elevation": "约250米",
+    "difficulty": "★★☆☆☆",
+    "rating": 4.6,
+    "reviews": 208,
+    "description": "重庆周边保存最好的古寨之一",
+    "highlights": [
+      "古寨石砌城墙",
+      "古建筑遗址",
+      "山顶观景点"
+    ],
+    "food": [
+      "南温泉附近农家乐",
+      "可以结合南温泉一起游玩"
+    ],
+    "spots": [
+      {
+        "name": "起点：樵坪山山脚",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.2256,
+        "lng": 106.6234
+      },
+      {
+        "name": "古寨入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.2242,
+        "lng": 106.6218
+      },
+      {
+        "name": "山顶观景点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.2198,
+        "lng": 106.6168
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "南温泉附近农家乐",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "可以结合南温泉一起游玩",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "樵坪山古寨保存较",
+      "是重庆周边少有的",
+      "石砌城墙和古建筑",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.2256,
+      "lng": 106.6234
+    },
+    "images": [
+      "/packageRoutes/images/routes/36-1.jpg",
+      "/packageRoutes/images/routes/36-2.jpg",
+      "/packageRoutes/images/routes/36-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/36-1.jpg"
+  },
+  {
+    "id": 37,
+    "name": "圣灯山原始森林野路",
+    "type": "hiking",
+    "duration": "1day",
+    "district": "banan",
+    "seasons": [
+      "summer",
+      "autumn"
+    ],
+    "festivals": [],
+    "cultureId": "bayu",
+    "distance": "约10公里",
+    "elevation": "约500米",
+    "difficulty": "★★★☆☆",
+    "rating": 4.6,
+    "reviews": 215,
+    "description": "重庆主城最近的原始森林感",
+    "highlights": [
+      "原始森林",
+      "古寺庙遗址",
+      "山顶观景点"
+    ],
+    "food": [
+      "农家豆花饭",
+      "小零食"
+    ],
+    "spots": [
+      {
+        "name": "起点：圣灯山镇",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1256,
+        "lng": 106.8234
+      },
+      {
+        "name": "后山入口",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1242,
+        "lng": 106.8218
+      },
+      {
+        "name": "原始森林深处",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1198,
+        "lng": 106.8168
+      },
+      {
+        "name": "圣灯山山脊",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1172,
+        "lng": 106.8132
+      },
+      {
+        "name": "古寺庙遗址",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1148,
+        "lng": 106.8098
+      },
+      {
+        "name": "山顶观景点",
+        "time": "30-60分钟",
+        "ticket": "免费",
+        "lat": 29.1132,
+        "lng": 106.8072
+      }
+    ],
+    "foodSpots": [
+      {
+        "name": "农家豆花饭",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      },
+      {
+        "name": "小零食",
+        "type": "本地特色",
+        "price": "人均20-50元"
+      }
+    ],
+    "tags": [
+      "圣灯山景区知道的",
+      "原始森林的感觉在",
+      "可以露营看日出",
+      "野路",
+      "小众徒步"
+    ],
+    "location": {
+      "lat": 29.1256,
+      "lng": 106.8234
+    },
+    "images": [
+      "/packageRoutes/images/routes/37-1.jpg",
+      "/packageRoutes/images/routes/37-2.jpg",
+      "/packageRoutes/images/routes/37-3.jpg"
+    ],
+    "image": "/packageRoutes/images/routes/37-1.jpg"
   }
 ];

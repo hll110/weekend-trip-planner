@@ -16,29 +16,30 @@
       </view>
     </view>
     <view class="hero__brand">
-      <view class="hero__title">重庆周边 · 大众与小众</view>
+      <view class="hero__title">周末出发 · 山城好去处</view>
       <view class="hero__subtitle" wx:if="{{weather}}">{{weather.travelTip}}</view>
     </view>
   </view>
 
-  <!-- 大众/小众筛选 -->
-  <scroll-view class="type-bar audience-bar" scroll-x enhanced show-scrollbar="{{false}}">
-    <view class="type-bar__inner">
-      <view class="type-pill {{filters.audience === 'all' ? 'type-pill--on' : ''}}" bindtap="setAudienceFilter" data-audience="all">全部</view>
-      <view class="type-pill type-pill--popular {{filters.audience === 'popular' ? 'type-pill--on' : ''}}" bindtap="setAudienceFilter" data-audience="popular">🏛️ 大众景点</view>
-      <view class="type-pill type-pill--niche {{filters.audience === 'niche' ? 'type-pill--on' : ''}}" bindtap="setAudienceFilter" data-audience="niche">🌿 小众秘境</view>
-    </view>
-  </scroll-view>
-
-  <!-- 快捷类型筛选 -->
-  <scroll-view class="type-bar" scroll-x enhanced show-scrollbar="{{false}}">
-    <view class="type-bar__inner">
-      <view class="type-pill {{filters.type === 'all' ? 'type-pill--on' : ''}}" bindtap="setTypeFilter" data-type="all">全部</view>
-      <view class="type-pill type-pill--hiking {{filters.type === 'hiking' ? 'type-pill--on' : ''}}" bindtap="setTypeFilter" data-type="hiking">⛰️ 徒步爬山</view>
-      <view class="type-pill {{filters.type === 'scenic' ? 'type-pill--on' : ''}}" bindtap="setTypeFilter" data-type="scenic">🏞️ 景区游玩</view>
-      <view class="type-pill {{filters.type === 'food' ? 'type-pill--on' : ''}}" bindtap="setTypeFilter" data-type="food">🍲 美食路线</view>
-    </view>
-  </scroll-view>
+  <!-- 筛选条件栏 -->
+  <view class="filter-panel">
+    <scroll-view class="filter-panel__row" scroll-x enhanced show-scrollbar="{{false}}">
+      <view class="filter-panel__inner">
+        <view class="type-pill {{filters.audience === 'all' ? 'type-pill--on' : ''}}" bindtap="setAudienceFilter" data-audience="all">全部</view>
+        <view class="type-pill type-pill--popular {{filters.audience === 'popular' ? 'type-pill--on' : ''}}" bindtap="setAudienceFilter" data-audience="popular">🏛️ 大众景点</view>
+        <view class="type-pill type-pill--niche {{filters.audience === 'niche' ? 'type-pill--on' : ''}}" bindtap="setAudienceFilter" data-audience="niche">🌿 小众秘境</view>
+      </view>
+    </scroll-view>
+    <view class="filter-panel__divider"></view>
+    <scroll-view class="filter-panel__row" scroll-x enhanced show-scrollbar="{{false}}">
+      <view class="filter-panel__inner">
+        <view class="type-pill {{filters.type === 'all' ? 'type-pill--on' : ''}}" bindtap="setTypeFilter" data-type="all">全部</view>
+        <view class="type-pill type-pill--hiking {{filters.type === 'hiking' ? 'type-pill--on' : ''}}" bindtap="setTypeFilter" data-type="hiking">⛰️ 徒步爬山</view>
+        <view class="type-pill {{filters.type === 'scenic' ? 'type-pill--on' : ''}}" bindtap="setTypeFilter" data-type="scenic">🏞️ 景区游玩</view>
+        <view class="type-pill {{filters.type === 'food' ? 'type-pill--on' : ''}}" bindtap="setTypeFilter" data-type="food">🍲 美食路线</view>
+      </view>
+    </scroll-view>
+  </view>
 
   <!-- 筛选摘要 -->
   <view class="filter-bar" wx:if="{{activeFilterLabels.length > 0}}">

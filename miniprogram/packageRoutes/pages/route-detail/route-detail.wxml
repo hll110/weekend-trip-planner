@@ -30,8 +30,11 @@
             <text class="rating-value">{{route.rating}}</text>
             <text class="rating-count">({{route.reviews}}条评价)</text>
           </view>
-          <view class="route-type-badge {{route.type}}">
-            {{route.type === 'food' ? '美食' : route.type === 'hiking' ? '徒步' : '景区'}}
+          <view class="route-badges">
+            <view class="route-audience-badge route-audience-badge--{{route.audience}}">{{route.audienceLabel}}</view>
+            <view class="route-type-badge {{route.type}}">
+              {{route.type === 'food' ? '美食' : route.type === 'hiking' ? '徒步' : '景区'}}
+            </view>
           </view>
         </view>
       </view>

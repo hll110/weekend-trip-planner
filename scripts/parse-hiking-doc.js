@@ -169,10 +169,11 @@ function parseRouteBlock(block, docIndex) {
   const diffStars = (difficulty.match(/★/g) || []).length;
   const rating = Math.min(4.9, 4.35 + diffStars * 0.08 + (docIndex % 5) * 0.03).toFixed(1);
 
-  return {
+    return {
     id: START_ID + docIndex - 1,
     name,
     type: 'hiking',
+    audience: 'niche',
     duration: parseDuration(hours),
     district: parseDistrict(location),
     seasons: parseSeasons(seasonText),

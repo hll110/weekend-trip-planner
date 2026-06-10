@@ -10,7 +10,10 @@ Page({
     districts: ext.districts.filter((d) => d.id !== 'all').slice(0, 16),
     districtTotal: ext.districts.length - 1,
     seasons: ext.seasons.filter((s) => s.id !== 'all'),
-    hikingRoutes: [],
+    popularRoutes: [],
+    nicheRoutes: [],
+    popularCount: 0,
+    nicheCount: 0,
     hikingCount: 0,
     scenicCount: 0,
     foodCount: 0
@@ -33,15 +36,21 @@ Page({
 
   loadRouteStats() {
     const routes = app.globalData.routes || [];
-    const hikingRoutes = routes
-      .filter((r) => r.type === 'hiking' && r.id >= 13)
-      .slice(0, 6);
+    const popularRoutes = routes.filter((r) => r.audience === 'popular').slice(0, 4);
+    const nicheRoutes = routes.filter((r) => r.audience === 'niche').slice(0, 6);
     this.setData({
-      hikingRoutes,
+      popularRoutes,
+      nicheRoutes,
+      popularCount: routes.filter((r) => r.audience === 'popular').length,
+      nicheCount: routes.filter((r) => r.audience === 'niche').length,
       hikingCount: routes.filter((r) => r.type === 'hiking').length,
       scenicCount: routes.filter((r) => r.type === 'scenic').length,
       foodCount: routes.filter((r) => r.type === 'food').length
     });
+  },
+
+  filterByAudience(e) {
+    this.applyAndHome({ audience: e.currentTarget.dataset.audience, type: 'all' });
   },
 
   filterByType(e) {
@@ -60,8 +69,12 @@ Page({
     nav.toRouteDetail(e.currentTarget.dataset.id);
   },
 
-  goAllHiking() {
-    this.applyAndHome({ type: 'hiking' });
+  goAllPopular() {
+    this.applyAndHome({ audience: 'popular', type: 'all' });
+  },
+
+  goAllNiche() {
+    this.applyAndHome({ audience: 'niche', type: 'all' });
   },
 
   applyAndHome(patch) {
@@ -71,7 +84,7 @@ Page({
 
   onShareAppMessage() {
     return {
-      title: '渝趣周边游 - 重庆小众徒步路线',
+      title: '渝趣周边游 - 大众景点与小众秘境',
       path: '/pages/discover/discover'
     };
   }

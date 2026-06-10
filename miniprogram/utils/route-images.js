@@ -1,4 +1,5 @@
 const config = require('../config.js');
+const { enrichAudience } = require('./route-audience.js');
 
 const FALLBACK_POOL = [
   config.placeholderImage,
@@ -24,6 +25,7 @@ function enrichRoute(route, districtName) {
   const images = normalizeImages(route);
   return {
     ...route,
+    ...enrichAudience(route),
     images,
     image: images[0],
     imageCount: images.length,

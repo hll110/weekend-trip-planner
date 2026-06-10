@@ -39,6 +39,12 @@ const districts = [
   { id: 'pengshui', name: '彭水县' }
 ];
 
+const audiences = [
+  { id: 'all', name: '全部' },
+  { id: 'popular', name: '大众景点', icon: '🏛️', desc: '经典打卡、景区美食' },
+  { id: 'niche', name: '小众秘境', icon: '🌿', desc: '野路徒步、本地私藏' }
+];
+
 const seasons = [
   { id: 'all', name: '全季', icon: '🗓️' },
   { id: 'spring', name: '春季', icon: '🌸', desc: '赏花踏青、温和湿润' },
@@ -49,5 +55,6 @@ const seasons = [
 
 module.exports = {
   districts,
+  audiences,
   seasons
 };

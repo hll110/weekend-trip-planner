@@ -54,6 +54,57 @@
   line-height: 1.5;
 }
 
+/* 大众/小众入口 */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.audience-card {
+  padding: 28rpx 20rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  box-shadow: 0 2rpx 12rpx rgba(27, 67, 50, 0.08);
+}
+
+.audience-card--hover {
+  transform: scale(0.98);
+  opacity: 0.92;
+}
+
+.audience-card--popular { border-top: 6rpx solid #dd6b20; }
+.audience-card--niche { border-top: 6rpx solid #2d6a4f; }
+
+.audience-card__icon {
+  display: block;
+  font-size: 44rpx;
+  margin-bottom: 8rpx;
+}
+
+.audience-card__name {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.audience-card__desc {
+  display: block;
+  font-size: 22rpx;
+  color: #64748b;
+  margin-top: 6rpx;
+}
+
+.audience-card__count {
+  display: block;
+  font-size: 24rpx;
+  color: #2d6a4f;
+  margin-top: 12rpx;
+  font-weight: 500;
+}
+
 /* 分类入口 */
 .category-grid {
   display: grid;

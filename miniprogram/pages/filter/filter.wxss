@@ -48,6 +48,20 @@
   gap: 16rpx;
 }
 
+.type-grid--2 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.type-option--popular.active {
+  background: #fff7ed;
+  border-color: #dd6b20;
+}
+
+.type-option--niche.active {
+  background: #f0f7f4;
+  border-color: #2d6a4f;
+}
+
 .type-option {
   text-align: center;
   padding: 20rpx 8rpx;

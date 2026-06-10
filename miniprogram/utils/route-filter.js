@@ -4,6 +4,9 @@ function applyFilters(routes, filters) {
   let list = routes || [];
   const f = filters || {};
 
+  if (f.audience && f.audience !== 'all') {
+    list = list.filter(r => r.audience === f.audience);
+  }
   if (f.type && f.type !== 'all') {
     list = list.filter(r => r.type === f.type);
   }

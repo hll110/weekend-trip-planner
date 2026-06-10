@@ -7,6 +7,21 @@
       </view>
 
       <view class="filter-section card">
+        <view class="section-title">景点类型</view>
+        <view class="type-grid type-grid--2">
+          <view class="type-option {{filters.audience === 'all' ? 'active' : ''}}" bindtap="setAudience" data-audience="all">
+            <text class="type-icon">🗺️</text><text class="type-name">全部</text>
+          </view>
+          <view class="type-option type-option--popular {{filters.audience === 'popular' ? 'active' : ''}}" bindtap="setAudience" data-audience="popular">
+            <text class="type-icon">🏛️</text><text class="type-name">大众景点</text>
+          </view>
+          <view class="type-option type-option--niche {{filters.audience === 'niche' ? 'active' : ''}}" bindtap="setAudience" data-audience="niche">
+            <text class="type-icon">🌿</text><text class="type-name">小众秘境</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="filter-section card">
         <view class="section-title">路线类型</view>
         <view class="type-grid">
           <view class="type-option {{filters.type === 'all' ? 'active' : ''}}" bindtap="setType" data-type="all">
@@ -61,7 +76,7 @@
         <view class="section-title">预览</view>
         <view class="preview-route" wx:for="{{previewRoutes}}" wx:key="id">
           <text class="preview-name">{{item.name}}</text>
-          <text class="preview-type">{{item.type === 'food' ? '美食' : item.type === 'hiking' ? '徒步' : '景区'}}</text>
+          <text class="preview-type">{{item.audienceLabel}} · {{item.type === 'food' ? '美食' : item.type === 'hiking' ? '徒步' : '景区'}}</text>
         </view>
       </view>
     </view>

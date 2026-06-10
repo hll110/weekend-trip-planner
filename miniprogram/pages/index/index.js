@@ -13,6 +13,7 @@ Page({
     filteredRoutes: [],
     activeFilterLabels: [],
     filters: app.getDefaultFilters(),
+    listTitle: '精选路线',
     isLoading: true
   },
 
@@ -31,11 +32,15 @@ Page({
     const filters = { ...app.globalData.filters };
     const routes = app.globalData.routes || [];
     const filteredRoutes = routeFilter.applyFilters(routes, filters);
+    const listTitle =
+      filters.audience === 'popular' ? '大众景点' :
+      filters.audience === 'niche' ? '小众秘境' : '精选路线';
     this.setData({
       location: app.globalData.location,
       filters,
       routes,
       filteredRoutes,
+      listTitle,
       activeFilterLabels: this.buildFilterLabels(filters),
       isLoading: !app.globalData.routesReady && routes.length === 0
     });
@@ -43,8 +48,10 @@ Page({
 
   buildFilterLabels(filters) {
     const labels = [];
+    const audienceMap = { popular: '大众景点', niche: '小众秘境' };
     const typeMap = { food: '美食路线', hiking: '徒步爬山', scenic: '景区游玩' };
     const seasonMap = { spring: '春季', summer: '夏季', autumn: '秋季', winter: '冬季' };
+    if (filters.audience && filters.audience !== 'all') labels.push(audienceMap[filters.audience] || filters.audience);
     if (filters.type && filters.type !== 'all') labels.push(typeMap[filters.type] || filters.type);
     if (filters.duration && filters.duration !== 'all') {
       labels.push(filters.duration === '1day' ? '1日游' : '2日游');
@@ -92,6 +99,10 @@ Page({
     const filters = { ...app.globalData.filters, [key]: value };
     app.globalData.filters = filters;
     this.syncPageState();
+  },
+
+  setAudienceFilter(e) {
+    this.applyFilter('audience', e.currentTarget.dataset.audience);
   },
 
   setTypeFilter(e) {

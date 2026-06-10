@@ -38,6 +38,10 @@ Page({
     this.refreshPreview(filters);
   },
 
+  setAudience(e) {
+    this.patchFilter('audience', e.currentTarget.dataset.audience);
+  },
+
   setType(e) {
     this.patchFilter('type', e.currentTarget.dataset.type);
   },

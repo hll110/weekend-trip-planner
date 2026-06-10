@@ -124,6 +124,18 @@
   box-shadow: 0 4rpx 12rpx rgba(45, 106, 79, 0.25);
 }
 
+.audience-bar {
+  margin-top: 20rpx;
+}
+
+.type-pill--popular.type-pill--on {
+  background: linear-gradient(135deg, #dd6b20, #f6ad55);
+}
+
+.type-pill--niche.type-pill--on {
+  background: linear-gradient(135deg, #1b4332, #40916c);
+}
+
 .type-pill--hiking.type-pill--on {
   background: linear-gradient(135deg, #1b4332, #2d6a4f);
 }
@@ -227,8 +239,27 @@
   right: 16rpx;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   z-index: 2;
 }
+
+.route-card__badges-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+  max-width: 70%;
+}
+
+.route-card__audience {
+  padding: 6rpx 14rpx;
+  font-size: 20rpx;
+  color: #fff;
+  border-radius: 8rpx;
+  font-weight: 600;
+}
+
+.route-card__audience--popular { background: rgba(221, 107, 32, 0.9); }
+.route-card__audience--niche { background: rgba(27, 67, 50, 0.9); }
 
 .route-card__type {
   padding: 8rpx 18rpx;

@@ -16,10 +16,19 @@
       </view>
     </view>
     <view class="hero__brand">
-      <view class="hero__title">小众徒步 · 山城探秘</view>
+      <view class="hero__title">重庆周边 · 大众与小众</view>
       <view class="hero__subtitle" wx:if="{{weather}}">{{weather.travelTip}}</view>
     </view>
   </view>
+
+  <!-- 大众/小众筛选 -->
+  <scroll-view class="type-bar audience-bar" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="type-bar__inner">
+      <view class="type-pill {{filters.audience === 'all' ? 'type-pill--on' : ''}}" bindtap="setAudienceFilter" data-audience="all">全部</view>
+      <view class="type-pill type-pill--popular {{filters.audience === 'popular' ? 'type-pill--on' : ''}}" bindtap="setAudienceFilter" data-audience="popular">🏛️ 大众景点</view>
+      <view class="type-pill type-pill--niche {{filters.audience === 'niche' ? 'type-pill--on' : ''}}" bindtap="setAudienceFilter" data-audience="niche">🌿 小众秘境</view>
+    </view>
+  </scroll-view>
 
   <!-- 快捷类型筛选 -->
   <scroll-view class="type-bar" scroll-x enhanced show-scrollbar="{{false}}">
@@ -43,7 +52,7 @@
 
   <!-- 路线列表 -->
   <view class="routes-header">
-    <text class="routes-header__title">精选路线</text>
+    <text class="routes-header__title">{{listTitle}}</text>
     <view class="routes-header__right">
       <text class="routes-header__count">{{filteredRoutes.length}} 条</text>
       <text class="routes-header__more" bindtap="openFilter">筛选 ›</text>
@@ -83,9 +92,12 @@
           </swiper-item>
         </swiper>
         <view class="route-card__badges">
-          <text class="route-card__type route-card__type--{{item.type}}">
-            {{item.type === 'hiking' ? '徒步' : item.type === 'food' ? '美食' : '景区'}}
-          </text>
+          <view class="route-card__badges-left">
+            <text class="route-card__audience route-card__audience--{{item.audience}}">{{item.audienceLabel}}</text>
+            <text class="route-card__type route-card__type--{{item.type}}">
+              {{item.type === 'hiking' ? '徒步' : item.type === 'food' ? '美食' : '景区'}}
+            </text>
+          </view>
           <text class="route-card__duration">{{item.duration === '1day' ? '1日游' : '2日游'}}</text>
         </view>
         <view class="route-card__img-count" wx:if="{{item.imageCount > 1}}">{{item.imageCount}} 图</view>

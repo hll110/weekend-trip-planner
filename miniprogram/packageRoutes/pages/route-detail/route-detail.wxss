@@ -57,6 +57,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16rpx;
+}
+
+.route-badges {
+  display: flex;
+  gap: 10rpx;
+  flex-shrink: 0;
 }
 
 .route-rating {
@@ -80,6 +87,17 @@
 .route-type-badge.food { background: rgba(196, 30, 42, 0.85); }
 .route-type-badge.hiking { background: rgba(27, 67, 50, 0.85); }
 .route-type-badge.scenic { background: rgba(221, 107, 32, 0.85); }
+
+.route-audience-badge {
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  font-weight: 600;
+}
+
+.route-audience-badge--popular { background: rgba(221, 107, 32, 0.9); }
+.route-audience-badge--niche { background: rgba(27, 67, 50, 0.9); }
 
 /* 卡片 */
 .card {

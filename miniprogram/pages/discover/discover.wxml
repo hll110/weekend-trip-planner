@@ -12,35 +12,79 @@
     <view class="weather-card__tip">💡 {{weather.travelTip}}</view>
   </view>
 
+  <!-- 大众 / 小众入口 -->
+  <view class="audience-grid">
+    <view class="audience-card audience-card--popular" bindtap="filterByAudience" data-audience="popular" hover-class="audience-card--hover">
+      <text class="audience-card__icon">🏛️</text>
+      <text class="audience-card__name">大众景点</text>
+      <text class="audience-card__desc">经典打卡 · 景区美食</text>
+      <text class="audience-card__count">{{popularCount}} 条路线</text>
+    </view>
+    <view class="audience-card audience-card--niche" bindtap="filterByAudience" data-audience="niche" hover-class="audience-card--hover">
+      <text class="audience-card__icon">🌿</text>
+      <text class="audience-card__name">小众秘境</text>
+      <text class="audience-card__desc">野路徒步 · 本地私藏</text>
+      <text class="audience-card__count">{{nicheCount}} 条路线</text>
+    </view>
+  </view>
+
   <!-- 路线分类入口 -->
   <view class="category-grid">
     <view class="category-card category-card--hiking" bindtap="filterByType" data-type="hiking" hover-class="category-card--hover">
       <text class="category-card__icon">⛰️</text>
       <text class="category-card__name">徒步爬山</text>
-      <text class="category-card__count">{{hikingCount}} 条路线</text>
+      <text class="category-card__count">{{hikingCount}} 条</text>
     </view>
     <view class="category-card category-card--scenic" bindtap="filterByType" data-type="scenic" hover-class="category-card--hover">
       <text class="category-card__icon">🏞️</text>
       <text class="category-card__name">景区游玩</text>
-      <text class="category-card__count">{{scenicCount}} 条路线</text>
+      <text class="category-card__count">{{scenicCount}} 条</text>
     </view>
     <view class="category-card category-card--food" bindtap="filterByType" data-type="food" hover-class="category-card--hover">
       <text class="category-card__icon">🍲</text>
       <text class="category-card__name">美食路线</text>
-      <text class="category-card__count">{{foodCount}} 条路线</text>
+      <text class="category-card__count">{{foodCount}} 条</text>
     </view>
   </view>
 
-  <!-- 徒步精选 -->
-  <view class="section" wx:if="{{hikingRoutes.length > 0}}">
+  <!-- 大众精选 -->
+  <view class="section" wx:if="{{popularRoutes.length > 0}}">
     <view class="section__head">
-      <text class="section__title">🥾 野路徒步精选</text>
-      <text class="section__more" bindtap="goAllHiking">查看全部 ›</text>
+      <text class="section__title">🏛️ 大众精选</text>
+      <text class="section__more" bindtap="goAllPopular">查看全部 ›</text>
     </view>
     <view class="featured-list">
       <view
         class="featured-item"
-        wx:for="{{hikingRoutes}}"
+        wx:for="{{popularRoutes}}"
+        wx:key="id"
+        bindtap="goToRoute"
+        data-id="{{item.id}}"
+        hover-class="featured-item--hover"
+      >
+        <image class="featured-item__img" src="{{item.image}}" mode="aspectFill" lazy-load />
+        <view class="featured-item__body">
+          <text class="featured-item__name">{{item.name}}</text>
+          <text class="featured-item__meta">{{item.districtName}} · {{item.distance}}</text>
+          <view class="featured-item__rating">
+            <text class="featured-item__star">★</text>
+            <text>{{item.rating}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 小众精选 -->
+  <view class="section" wx:if="{{nicheRoutes.length > 0}}">
+    <view class="section__head">
+      <text class="section__title">🌿 小众秘境</text>
+      <text class="section__more" bindtap="goAllNiche">查看全部 ›</text>
+    </view>
+    <view class="featured-list">
+      <view
+        class="featured-item"
+        wx:for="{{nicheRoutes}}"
         wx:key="id"
         bindtap="goToRoute"
         data-id="{{item.id}}"
